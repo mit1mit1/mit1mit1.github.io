@@ -1,39 +1,40 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, H as append_hydration, C as noop, J as destroy_each, K as src_url_equal } from "../../chunks/index-bda98a9a.js";
+import { b as base } from "../../chunks/paths-0de5170f.js";
 const projectList = [
   {
     name: "Guess the Tune",
     description: "A wordle inspired game designed to help teach sheet music reading and basic music theory.",
     githubAddress: "https://github.com/mit1mit1/guess-the-tune",
     siteAddress: "https://mit1mit1.github.io/guess-the-tune",
-    iconName: "/images/musicle.ico"
+    iconName: "musicle.ico"
   },
   {
     name: "Software Dev Resources",
     description: `A collection of links to various resources I've found helpful as a software dev, plus notes on some of them, and a comic representation of some of the notes.`,
     githubAddress: "https://github.com/mit1mit1/software-dev-resources",
     siteAddress: "https://mit1mit1.github.io/software-dev-resources",
-    iconName: "/images/beanie.ico"
+    iconName: "beanie.ico"
   },
   {
     name: "Newtonian Dog Fighter 3000",
     description: "A game about flying small circles around bigger ones and running into each other.",
     githubAddress: "https://github.com/mit1mit1/newtonian-dog-fighter-3000",
     siteAddress: "https://mit1mit1.github.io/newtonian-dog-fighter-3000",
-    iconName: "/images/newtonian.png"
+    iconName: "newtonian.png"
   },
   {
     name: "Explomandlebrot",
     description: "An audio-visual fractal experience. Slide around the Mandlebrot set while listing to music generated from it.",
     githubAddress: "https://github.com/mit1mit1/explomandlebrot",
     siteAddress: "https://mit1mit1.github.io/explomandlebrot",
-    iconName: "/images/mandlebrot.ico"
+    iconName: "mandlebrot.ico"
   },
   {
     name: "Napoleonic Chess Simulator 3000",
     description: "A game about learning chess, playing chess, and failing history class.",
     githubAddress: "https://github.com/mit1mit1/napoleonic-chess-simulator-3000",
     siteAddress: "https://mit1mit1.github.io/napoleonic-chess-simulator-3000",
-    iconName: "/images/Napoleon.svg"
+    iconName: "Napoleon.svg"
   }
 ];
 const _page_svelte_svelte_type_style_lang = "";
@@ -56,8 +57,8 @@ function create_if_block_2(ctx) {
     },
     h() {
       attr(img, "class", "boxIcon svelte-1motezc");
-      if (!src_url_equal(img.src, img_src_value = /*project*/
-      ctx[0].iconName))
+      if (!src_url_equal(img.src, img_src_value = `${base}/images/${/*project*/
+      ctx[0].iconName}`))
         attr(img, "src", img_src_value);
       attr(img, "alt", `Picture of ${/*project*/
       ctx[0].name}`);
@@ -347,7 +348,7 @@ function create_fragment(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*projectList*/
+      if (dirty & /*projectList, base*/
       0) {
         each_value = projectList;
         let i;

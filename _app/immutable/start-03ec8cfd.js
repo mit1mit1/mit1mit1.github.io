@@ -1,5 +1,6 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, a as space, e as empty, c as claim_space, b as insert_hydration, g as group_outros, t as transition_out, d as check_outros, f as transition_in, h as detach, j as afterUpdate, o as onMount, k as element, l as claim_element, m as children, n as attr, p as set_style, q as text, r as claim_text, u as set_data, v as binding_callbacks, w as construct_svelte_component, x as create_component, y as claim_component, z as mount_component, A as destroy_component, B as tick } from "./chunks/index-bda98a9a.js";
-import { S as SCROLL_KEY, a as SNAPSHOT_KEY, I as INDEX_KEY, g as get_base_uri, f as find_anchor, b as get_link_info, c as get_router_options, s as stores, i as is_external_url, d as scroll_state, e as base, P as PRELOAD_PRIORITIES, h as init$1, j as set_assets, k as set_version } from "./chunks/singletons-7b3dd0bc.js";
+import { S as SCROLL_KEY, a as SNAPSHOT_KEY, I as INDEX_KEY, g as get_base_uri, f as find_anchor, b as get_link_info, c as get_router_options, s as stores, i as is_external_url, d as scroll_state, P as PRELOAD_PRIORITIES, e as init$1, h as set_version } from "./chunks/singletons-7b657661.js";
+import { b as base, s as set_assets } from "./chunks/paths-0de5170f.js";
 function normalize_path(path, trailing_slash) {
   if (path === "/" || trailing_slash === "ignore")
     return path;
@@ -901,8 +902,8 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
 const matchers = {};
 const nodes = [
   () => __vitePreload(() => import("./chunks/0-5d2601e9.js"), true ? ["./chunks/0-5d2601e9.js","./chunks/_layout-9a8b0c19.js","./components/layout.svelte-7b24536b.js","./chunks/index-bda98a9a.js"] : void 0, import.meta.url),
-  () => __vitePreload(() => import("./chunks/1-f96b7de3.js"), true ? ["./chunks/1-f96b7de3.js","./components/error.svelte-339083d6.js","./chunks/index-bda98a9a.js","./chunks/singletons-7b3dd0bc.js"] : void 0, import.meta.url),
-  () => __vitePreload(() => import("./chunks/2-71157164.js"), true ? ["./chunks/2-71157164.js","./components/pages/_page.svelte-6a0892ec.js","./chunks/index-bda98a9a.js","./assets/_page-0af5f44e.css"] : void 0, import.meta.url)
+  () => __vitePreload(() => import("./chunks/1-a25cda1d.js"), true ? ["./chunks/1-a25cda1d.js","./components/error.svelte-8fe2305b.js","./chunks/index-bda98a9a.js","./chunks/singletons-7b657661.js","./chunks/paths-0de5170f.js"] : void 0, import.meta.url),
+  () => __vitePreload(() => import("./chunks/2-c2f23671.js"), true ? ["./chunks/2-c2f23671.js","./components/pages/_page.svelte-1d6830de.js","./chunks/index-bda98a9a.js","./chunks/paths-0de5170f.js","./assets/_page-0af5f44e.css"] : void 0, import.meta.url)
 ];
 const server_loads = [];
 const dictionary = {
