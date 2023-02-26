@@ -1,4 +1,4 @@
-import { C as noop, s as safe_not_equal } from "./index-9aa484bb.js";
+import { C as noop, s as safe_not_equal } from "./index-bda98a9a.js";
 const subscriber_queue = [];
 function writable(value, start = noop) {
   let stop;
@@ -41,7 +41,7 @@ function writable(value, start = noop) {
   }
   return { set, update, subscribe };
 }
-const base = "/top-ten-hundred";
+const base = "";
 let assets = base;
 function set_assets(path) {
   assets = path;

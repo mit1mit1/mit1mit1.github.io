@@ -1,39 +1,39 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, H as append_hydration, C as noop, J as destroy_each } from "../../chunks/index-9aa484bb.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, H as append_hydration, C as noop, J as destroy_each, K as src_url_equal } from "../../chunks/index-bda98a9a.js";
 const projectList = [
   {
     name: "Guess the Tune",
     description: "A wordle inspired game designed to help teach sheet music reading and basic music theory.",
     githubAddress: "https://github.com/mit1mit1/guess-the-tune",
     siteAddress: "https://mit1mit1.github.io/guess-the-tune",
-    iconFilename: "guess-the-tune"
+    iconName: "/images/musicle.ico"
   },
   {
     name: "Software Dev Resources",
     description: `A collection of links to various resources I've found helpful as a software dev, plus notes on some of them, and a comic representation of some of the notes.`,
     githubAddress: "https://github.com/mit1mit1/software-dev-resources",
     siteAddress: "https://mit1mit1.github.io/software-dev-resources",
-    iconFilename: "software-dev-resources"
+    iconName: "/images/beanie.ico"
   },
   {
     name: "Newtonian Dog Fighter 3000",
     description: "A game about flying small circles around bigger ones and running into each other.",
     githubAddress: "https://github.com/mit1mit1/newtonian-dog-fighter-3000",
     siteAddress: "https://mit1mit1.github.io/newtonian-dog-fighter-3000",
-    iconFilename: "newtonian-dog-fighter-3000"
+    iconName: "/images/newtonian.png"
   },
   {
     name: "Explomandlebrot",
     description: "An audio-visual fractal experience. Slide around the Mandlebrot set while listing to music generated from it.",
     githubAddress: "https://github.com/mit1mit1/explomandlebrot",
     siteAddress: "https://mit1mit1.github.io/explomandlebrot",
-    iconFilename: "explomandlebrot"
+    iconName: "/images/mandlebrot.ico"
   },
   {
-    name: "Top Ten Hundred",
-    description: "A dictionary of the top one thousand words, defined using only the top one thousand words.",
-    githubAddress: "https://github.com/mit1mit1/top-ten-hundred",
-    siteAddress: "https://mit1mit1.github.io/top-ten-hundred",
-    iconFilename: "top-ten-hundred"
+    name: "Napoleonic Chess Simulator 3000",
+    description: "A game about learning chess, playing chess, and failing history class.",
+    githubAddress: "https://github.com/mit1mit1/napoleonic-chess-simulator-3000",
+    siteAddress: "https://mit1mit1.github.io/napoleonic-chess-simulator-3000",
+    iconName: "/images/Napoleon.svg"
   }
 ];
 const _page_svelte_svelte_type_style_lang = "";
@@ -41,6 +41,36 @@ function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[0] = list[i];
   return child_ctx;
+}
+function create_if_block_2(ctx) {
+  let img;
+  let img_src_value;
+  return {
+    c() {
+      img = element("img");
+      this.h();
+    },
+    l(nodes) {
+      img = claim_element(nodes, "IMG", { class: true, src: true, alt: true });
+      this.h();
+    },
+    h() {
+      attr(img, "class", "boxIcon svelte-1motezc");
+      if (!src_url_equal(img.src, img_src_value = /*project*/
+      ctx[0].iconName))
+        attr(img, "src", img_src_value);
+      attr(img, "alt", `Picture of ${/*project*/
+      ctx[0].name}`);
+    },
+    m(target, anchor) {
+      insert_hydration(target, img, anchor);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(img);
+    }
+  };
 }
 function create_else_block(ctx) {
   let t_value = (
@@ -125,7 +155,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h() {
-      attr(div, "class", "svelte-b9ts9z");
+      attr(div, "class", "svelte-1motezc");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
@@ -142,16 +172,21 @@ function create_each_block(ctx) {
   let div1;
   let h2;
   let t0;
-  let div0;
   let t1;
+  let div0;
+  let t2;
   let a;
-  let t2_value = (
+  let t3_value = (
     /*project*/
     ctx[0].githubAddress + ""
   );
-  let t2;
   let t3;
   let t4;
+  let t5;
+  let if_block0 = (
+    /*project*/
+    ctx[0].iconName && create_if_block_2(ctx)
+  );
   function select_block_type(ctx2, dirty) {
     if (
       /*project*/
@@ -161,8 +196,8 @@ function create_each_block(ctx) {
     return create_else_block;
   }
   let current_block_type = select_block_type(ctx);
-  let if_block0 = current_block_type(ctx);
-  let if_block1 = (
+  let if_block1 = current_block_type(ctx);
+  let if_block2 = (
     /*project*/
     ctx[0].description && create_if_block(ctx)
   );
@@ -170,16 +205,19 @@ function create_each_block(ctx) {
     c() {
       div1 = element("div");
       h2 = element("h2");
-      if_block0.c();
+      if (if_block0)
+        if_block0.c();
       t0 = space();
+      if_block1.c();
+      t1 = space();
       div0 = element("div");
-      t1 = text("Github: ");
+      t2 = text("Github: ");
       a = element("a");
-      t2 = text(t2_value);
-      t3 = space();
-      if (if_block1)
-        if_block1.c();
+      t3 = text(t3_value);
       t4 = space();
+      if (if_block2)
+        if_block2.c();
+      t5 = space();
       this.h();
     },
     l(nodes) {
@@ -187,63 +225,76 @@ function create_each_block(ctx) {
       var div1_nodes = children(div1);
       h2 = claim_element(div1_nodes, "H2", { class: true });
       var h2_nodes = children(h2);
-      if_block0.l(h2_nodes);
+      if (if_block0)
+        if_block0.l(h2_nodes);
+      t0 = claim_space(h2_nodes);
+      if_block1.l(h2_nodes);
       h2_nodes.forEach(detach);
-      t0 = claim_space(div1_nodes);
+      t1 = claim_space(div1_nodes);
       div0 = claim_element(div1_nodes, "DIV", { class: true });
       var div0_nodes = children(div0);
-      t1 = claim_text(div0_nodes, "Github: ");
+      t2 = claim_text(div0_nodes, "Github: ");
       a = claim_element(div0_nodes, "A", { href: true });
       var a_nodes = children(a);
-      t2 = claim_text(a_nodes, t2_value);
+      t3 = claim_text(a_nodes, t3_value);
       a_nodes.forEach(detach);
       div0_nodes.forEach(detach);
-      t3 = claim_space(div1_nodes);
-      if (if_block1)
-        if_block1.l(div1_nodes);
       t4 = claim_space(div1_nodes);
+      if (if_block2)
+        if_block2.l(div1_nodes);
+      t5 = claim_space(div1_nodes);
       div1_nodes.forEach(detach);
       this.h();
     },
     h() {
-      attr(h2, "class", "svelte-b9ts9z");
+      attr(h2, "class", "svelte-1motezc");
       attr(
         a,
         "href",
         /*project*/
         ctx[0].githubAddress
       );
-      attr(div0, "class", "svelte-b9ts9z");
-      attr(div1, "class", "projectBox svelte-b9ts9z");
+      attr(div0, "class", "svelte-1motezc");
+      attr(div1, "class", "projectBox svelte-1motezc");
     },
     m(target, anchor) {
       insert_hydration(target, div1, anchor);
       append_hydration(div1, h2);
-      if_block0.m(h2, null);
-      append_hydration(div1, t0);
+      if (if_block0)
+        if_block0.m(h2, null);
+      append_hydration(h2, t0);
+      if_block1.m(h2, null);
+      append_hydration(div1, t1);
       append_hydration(div1, div0);
-      append_hydration(div0, t1);
+      append_hydration(div0, t2);
       append_hydration(div0, a);
-      append_hydration(a, t2);
-      append_hydration(div1, t3);
-      if (if_block1)
-        if_block1.m(div1, null);
+      append_hydration(a, t3);
       append_hydration(div1, t4);
+      if (if_block2)
+        if_block2.m(div1, null);
+      append_hydration(div1, t5);
     },
     p(ctx2, dirty) {
-      if_block0.p(ctx2, dirty);
+      if (
+        /*project*/
+        ctx2[0].iconName
+      )
+        if_block0.p(ctx2, dirty);
+      if_block1.p(ctx2, dirty);
       if (
         /*project*/
         ctx2[0].description
       )
-        if_block1.p(ctx2, dirty);
+        if_block2.p(ctx2, dirty);
     },
     d(detaching) {
       if (detaching)
         detach(div1);
-      if_block0.d();
-      if (if_block1)
-        if_block1.d();
+      if (if_block0)
+        if_block0.d();
+      if_block1.d();
+      if (if_block2)
+        if_block2.d();
     }
   };
 }
@@ -283,8 +334,8 @@ function create_fragment(ctx) {
       this.h();
     },
     h() {
-      attr(h1, "class", "svelte-b9ts9z");
-      attr(div, "class", "pageContainer svelte-b9ts9z");
+      attr(h1, "class", "svelte-1motezc");
+      attr(div, "class", "pageContainer svelte-1motezc");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
