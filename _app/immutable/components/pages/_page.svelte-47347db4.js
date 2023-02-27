@@ -9,18 +9,18 @@ const projectList = [
     iconName: "musicle.ico"
   },
   {
-    name: "Software Dev Resources",
-    description: `A collection of links to various resources I've found helpful as a software dev, plus notes on some of them, and a comic representation of some of the notes.`,
-    githubAddress: "https://github.com/mit1mit1/software-dev-resources",
-    siteAddress: "https://mit1mit1.github.io/software-dev-resources",
-    iconName: "beanie.ico"
-  },
-  {
     name: "Newtonian Dog Fighter 3000",
     description: "Flying small circles around bigger ones and run into each other.",
     githubAddress: "https://github.com/mit1mit1/newtonian-dog-fighter-3000",
     siteAddress: "https://mit1mit1.github.io/newtonian-dog-fighter-3000",
     iconName: "newtonian.png"
+  },
+  {
+    name: "Software Dev Resources",
+    description: `A collection of links to various resources I've found helpful as a software dev, plus notes on some of them, and a comic representation of some of the notes.`,
+    githubAddress: "https://github.com/mit1mit1/software-dev-resources",
+    siteAddress: "https://mit1mit1.github.io/software-dev-resources",
+    iconName: "beanie.ico"
   },
   {
     name: "Explomandlebrot",
@@ -95,7 +95,7 @@ function create_else_block_1(ctx) {
       this.h();
     },
     h() {
-      attr(img, "class", "boxIcon svelte-1kttu20");
+      attr(img, "class", "boxIcon svelte-1oerd59");
       if (!src_url_equal(img.src, img_src_value = `${base}/images/${/*project*/
       ctx[0].iconName}`))
         attr(img, "src", img_src_value);
@@ -130,7 +130,7 @@ function create_if_block_3$1(ctx) {
       this.h();
     },
     h() {
-      attr(img, "class", "boxIcon svelte-1kttu20");
+      attr(img, "class", "boxIcon svelte-1oerd59");
       if (!src_url_equal(img.src, img_src_value = `${base}/images/${/*project*/
       ctx[0].iconName}`))
         attr(img, "src", img_src_value);
@@ -239,7 +239,7 @@ function create_if_block$1(ctx) {
       this.h();
     },
     h() {
-      attr(div, "class", "svelte-1kttu20");
+      attr(div, "class", "svelte-1oerd59");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
@@ -336,7 +336,7 @@ function create_each_block$1(ctx) {
       this.h();
     },
     h() {
-      attr(h2, "class", "svelte-1kttu20");
+      attr(h2, "class", "svelte-1oerd59");
       attr(
         a,
         "href",
@@ -344,9 +344,9 @@ function create_each_block$1(ctx) {
         ctx[0].githubAddress
       );
       attr(a, "target", "_blank");
-      attr(div0, "class", "svelte-1kttu20");
-      attr(div1, "class", "detailsBox svelte-1kttu20");
-      attr(div2, "class", "projectBox svelte-1kttu20");
+      attr(div0, "class", "svelte-1oerd59");
+      attr(div1, "class", "detailsBox svelte-1oerd59");
+      attr(div2, "class", "projectBox svelte-1oerd59");
     },
     m(target, anchor) {
       insert_hydration(target, div2, anchor);
@@ -394,6 +394,9 @@ function create_fragment$5(ctx) {
   let h1;
   let t0;
   let t1;
+  let div;
+  let t2;
+  let t3;
   let each_1_anchor;
   let each_value = projectList;
   let each_blocks = [];
@@ -403,8 +406,11 @@ function create_fragment$5(ctx) {
   return {
     c() {
       h1 = element("h1");
-      t0 = text("Projects by mit1mit1");
+      t0 = text("Projects by Midly");
       t1 = space();
+      div = element("div");
+      t2 = text("In decreasing order of polish");
+      t3 = space();
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
@@ -414,9 +420,14 @@ function create_fragment$5(ctx) {
     l(nodes) {
       h1 = claim_element(nodes, "H1", { class: true });
       var h1_nodes = children(h1);
-      t0 = claim_text(h1_nodes, "Projects by mit1mit1");
+      t0 = claim_text(h1_nodes, "Projects by Midly");
       h1_nodes.forEach(detach);
       t1 = claim_space(nodes);
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      t2 = claim_text(div_nodes, "In decreasing order of polish");
+      div_nodes.forEach(detach);
+      t3 = claim_space(nodes);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].l(nodes);
       }
@@ -424,12 +435,16 @@ function create_fragment$5(ctx) {
       this.h();
     },
     h() {
-      attr(h1, "class", "svelte-1kttu20");
+      attr(h1, "class", "svelte-1oerd59");
+      attr(div, "class", "subheading svelte-1oerd59");
     },
     m(target, anchor) {
       insert_hydration(target, h1, anchor);
       append_hydration(h1, t0);
       insert_hydration(target, t1, anchor);
+      insert_hydration(target, div, anchor);
+      append_hydration(div, t2);
+      insert_hydration(target, t3, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].m(target, anchor);
       }
@@ -463,6 +478,10 @@ function create_fragment$5(ctx) {
         detach(h1);
       if (detaching)
         detach(t1);
+      if (detaching)
+        detach(div);
+      if (detaching)
+        detach(t3);
       destroy_each(each_blocks, detaching);
       if (detaching)
         detach(each_1_anchor);
