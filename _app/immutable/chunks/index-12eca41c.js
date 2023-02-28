@@ -85,9 +85,6 @@ function get_all_dirty_from_scope($$scope) {
   }
   return -1;
 }
-function null_to_empty(value) {
-  return value == null ? "" : value;
-}
 let is_hydrating = false;
 function start_hydrating() {
   is_hydrating = true;
@@ -197,9 +194,6 @@ function destroy_each(iterations, detaching) {
 function element(name) {
   return document.createElement(name);
 }
-function svg_element(name) {
-  return document.createElementNS("http://www.w3.org/2000/svg", name);
-}
 function text(data) {
   return document.createTextNode(data);
 }
@@ -283,9 +277,6 @@ function claim_element_base(nodes, name, attributes, create_element) {
 }
 function claim_element(nodes, name, attributes) {
   return claim_element_base(nodes, name, attributes, element);
-}
-function claim_svg_element(nodes, name, attributes) {
-  return claim_element_base(nodes, name, attributes, svg_element);
 }
 function claim_text(nodes, data) {
   return claim_node(
@@ -580,12 +571,9 @@ export {
   get_slot_changes as G,
   append_hydration as H,
   component_subscribe as I,
-  destroy_each as J,
-  src_url_equal as K,
-  svg_element as L,
-  claim_svg_element as M,
-  null_to_empty as N,
-  listen as O,
+  src_url_equal as J,
+  destroy_each as K,
+  listen as L,
   SvelteComponent as S,
   space as a,
   insert_hydration as b,
