@@ -95,7 +95,7 @@ function create_else_block_1(ctx) {
       this.h();
     },
     h() {
-      attr(img, "class", "boxIcon svelte-azxuqt");
+      attr(img, "class", "boxIcon svelte-11bvk0d");
       if (!src_url_equal(img.src, img_src_value = `${base}/images/${/*project*/
       ctx[0].iconName}`))
         attr(img, "src", img_src_value);
@@ -135,7 +135,7 @@ function create_if_block_3$1(ctx) {
       this.h();
     },
     h() {
-      attr(img, "class", "boxIcon svelte-azxuqt");
+      attr(img, "class", "boxIcon svelte-11bvk0d");
       if (!src_url_equal(img.src, img_src_value = `${base}/images/${/*project*/
       ctx[0].iconName}`))
         attr(img, "src", img_src_value);
@@ -149,7 +149,7 @@ function create_if_block_3$1(ctx) {
       );
       attr(a, "target", "_blank");
       attr(a, "rel", "noreferrer");
-      attr(a, "class", "svelte-azxuqt");
+      attr(a, "class", "svelte-11bvk0d");
     },
     m(target, anchor) {
       insert_hydration(target, a, anchor);
@@ -219,7 +219,7 @@ function create_if_block_1$1(ctx) {
       );
       attr(a, "target", "_blank");
       attr(a, "rel", "noreferrer");
-      attr(a, "class", "svelte-azxuqt");
+      attr(a, "class", "svelte-11bvk0d");
     },
     m(target, anchor) {
       insert_hydration(target, a, anchor);
@@ -253,7 +253,7 @@ function create_if_block$1(ctx) {
       this.h();
     },
     h() {
-      attr(div, "class", "svelte-azxuqt");
+      attr(div, "class", "svelte-11bvk0d");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
@@ -350,7 +350,7 @@ function create_each_block$1(ctx) {
       this.h();
     },
     h() {
-      attr(h2, "class", "projectTitle svelte-azxuqt");
+      attr(h2, "class", "projectTitle svelte-11bvk0d");
       attr(
         a,
         "href",
@@ -359,9 +359,9 @@ function create_each_block$1(ctx) {
       );
       attr(a, "target", "_blank");
       attr(a, "rel", "noreferrer");
-      attr(div0, "class", "svelte-azxuqt");
-      attr(div1, "class", "detailsBox svelte-azxuqt");
-      attr(div2, "class", "projectBox svelte-azxuqt");
+      attr(div0, "class", "svelte-11bvk0d");
+      attr(div1, "class", "detailsBox svelte-11bvk0d");
+      attr(div2, "class", "projectBox svelte-11bvk0d");
     },
     m(target, anchor) {
       insert_hydration(target, div2, anchor);
@@ -452,8 +452,8 @@ function create_fragment$5(ctx) {
       this.h();
     },
     h() {
-      attr(h1, "class", "svelte-azxuqt");
-      attr(div0, "class", "subheading svelte-azxuqt");
+      attr(h1, "class", "svelte-11bvk0d");
+      attr(div0, "class", "subheading svelte-11bvk0d");
       attr(div1, "class", "projectsContainer");
     },
     m(target, anchor) {
@@ -1136,14 +1136,14 @@ function create_fragment$2(ctx) {
       this.h();
     },
     h() {
-      attr(h1, "class", "svelte-11fvzo3");
-      attr(div0, "class", "svelte-11fvzo3");
-      attr(div1, "class", "svelte-11fvzo3");
-      attr(div2, "class", "svelte-11fvzo3");
-      attr(div3, "class", "svelte-11fvzo3");
-      attr(div4, "class", "svelte-11fvzo3");
-      attr(div5, "class", "aboutMeText svelte-11fvzo3");
-      attr(div6, "class", "aboutMeBox svelte-11fvzo3");
+      attr(h1, "class", "svelte-ont4uf");
+      attr(div0, "class", "svelte-ont4uf");
+      attr(div1, "class", "svelte-ont4uf");
+      attr(div2, "class", "svelte-ont4uf");
+      attr(div3, "class", "svelte-ont4uf");
+      attr(div4, "class", "svelte-ont4uf");
+      attr(div5, "class", "aboutMeText svelte-ont4uf");
+      attr(div6, "class", "aboutMeBox svelte-ont4uf");
     },
     m(target, anchor) {
       insert_hydration(target, h1, anchor);
