@@ -1136,14 +1136,14 @@ function create_fragment$2(ctx) {
       this.h();
     },
     h() {
-      attr(h1, "class", "svelte-ont4uf");
-      attr(div0, "class", "svelte-ont4uf");
-      attr(div1, "class", "svelte-ont4uf");
-      attr(div2, "class", "svelte-ont4uf");
-      attr(div3, "class", "svelte-ont4uf");
-      attr(div4, "class", "svelte-ont4uf");
-      attr(div5, "class", "aboutMeText svelte-ont4uf");
-      attr(div6, "class", "aboutMeBox svelte-ont4uf");
+      attr(h1, "class", "svelte-1ap565a");
+      attr(div0, "class", "svelte-1ap565a");
+      attr(div1, "class", "svelte-1ap565a");
+      attr(div2, "class", "svelte-1ap565a");
+      attr(div3, "class", "svelte-1ap565a");
+      attr(div4, "class", "svelte-1ap565a");
+      attr(div5, "class", "aboutMeText svelte-1ap565a");
+      attr(div6, "class", "aboutMeBox svelte-1ap565a");
     },
     m(target, anchor) {
       insert_hydration(target, h1, anchor);
