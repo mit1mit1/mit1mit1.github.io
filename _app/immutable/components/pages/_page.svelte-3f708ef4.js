@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, e as empty, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, H as append_hydration, C as noop, J as destroy_each, K as src_url_equal, L as svg_element, M as claim_svg_element, x as create_component, y as claim_component, z as mount_component, f as transition_in, t as transition_out, A as destroy_component, d as check_outros, N as null_to_empty, O as listen, g as group_outros } from "../../chunks/index-65ec6c55.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, e as empty, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, H as append_hydration, C as noop, J as destroy_each, K as src_url_equal, L as svg_element, M as claim_svg_element, x as create_component, y as claim_component, z as mount_component, f as transition_in, t as transition_out, A as destroy_component, p as set_style, d as check_outros, N as null_to_empty, O as listen, g as group_outros } from "../../chunks/index-65ec6c55.js";
 import { b as base } from "../../chunks/paths-0de5170f.js";
 const projectList = [
   {
@@ -421,7 +421,7 @@ function create_fragment$5(ctx) {
   return {
     c() {
       h1 = element("h1");
-      t0 = text("Projects by Midly");
+      t0 = text("Projects");
       t1 = space();
       div = element("div");
       t2 = text("In decreasing order of polish");
@@ -435,7 +435,7 @@ function create_fragment$5(ctx) {
     l(nodes) {
       h1 = claim_element(nodes, "H1", { class: true });
       var h1_nodes = children(h1);
-      t0 = claim_text(h1_nodes, "Projects by Midly");
+      t0 = claim_text(h1_nodes, "Projects");
       h1_nodes.forEach(detach);
       t1 = claim_space(nodes);
       div = claim_element(nodes, "DIV", { class: true });
@@ -574,7 +574,7 @@ function create_fragment$4(ctx) {
       var ul_nodes = children(ul);
       li0 = claim_element(ul_nodes, "LI", {});
       var li0_nodes = children(li0);
-      a0 = claim_element(li0_nodes, "A", { href: true, target: true });
+      a0 = claim_element(li0_nodes, "A", { href: true, target: true, rel: true });
       var a0_nodes = children(a0);
       t3 = claim_text(a0_nodes, "givedirectly.org");
       a0_nodes.forEach(detach);
@@ -583,7 +583,7 @@ function create_fragment$4(ctx) {
       t5 = claim_space(ul_nodes);
       li1 = claim_element(ul_nodes, "LI", {});
       var li1_nodes = children(li1);
-      a1 = claim_element(li1_nodes, "A", { href: true, target: true });
+      a1 = claim_element(li1_nodes, "A", { href: true, target: true, rel: true });
       var a1_nodes = children(a1);
       t6 = claim_text(a1_nodes, "againstmalaria.com");
       a1_nodes.forEach(detach);
@@ -608,8 +608,10 @@ function create_fragment$4(ctx) {
       attr(h1, "class", "svelte-1gfqryh");
       attr(a0, "href", "https://www.givedirectly.org");
       attr(a0, "target", "_blank");
+      attr(a0, "rel", "noreferrer");
       attr(a1, "href", "https://www.againstmalaria.com");
       attr(a1, "target", "_blank");
+      attr(a1, "rel", "noreferrer");
       attr(div0, "class", "svelte-1gfqryh");
       attr(div1, "class", "svelte-1gfqryh");
       attr(div2, "class", "supportUsBox svelte-1gfqryh");
@@ -657,6 +659,7 @@ class SupportUs extends SvelteComponent {
     init(this, options, null, create_fragment$4, safe_not_equal, {});
   }
 }
+const WavingMe_svelte_svelte_type_style_lang = "";
 function create_fragment$3(ctx) {
   let svg;
   let rect0;
@@ -697,7 +700,12 @@ function create_fragment$3(ctx) {
       this.h();
     },
     l(nodes) {
-      svg = claim_svg_element(nodes, "svg", { width: true, height: true, viewBox: true });
+      svg = claim_svg_element(nodes, "svg", {
+        width: true,
+        height: true,
+        viewBox: true,
+        class: true
+      });
       var svg_nodes = children(svg);
       rect0 = claim_svg_element(svg_nodes, "rect", {
         class: true,
@@ -1002,6 +1010,7 @@ function create_fragment$3(ctx) {
       attr(svg, "width", "150");
       attr(svg, "height", "250");
       attr(svg, "viewBox", "0 0 270 500");
+      attr(svg, "class", "wavingMeSVG svelte-1e1g29e");
     },
     m(target, anchor) {
       insert_hydration(target, svg, anchor);
@@ -1042,15 +1051,23 @@ function create_fragment$2(ctx) {
   let h1;
   let t0;
   let t1;
-  let div3;
+  let div6;
   let wavingme;
   let t2;
-  let div2;
+  let div5;
   let div0;
   let t3;
   let t4;
   let div1;
   let t5;
+  let t6;
+  let div2;
+  let t7;
+  let t8;
+  let div3;
+  let t9;
+  let t10;
+  let div4;
   let current;
   wavingme = new WavingMe({});
   return {
@@ -1058,15 +1075,23 @@ function create_fragment$2(ctx) {
       h1 = element("h1");
       t0 = text("About me");
       t1 = space();
-      div3 = element("div");
+      div6 = element("div");
       create_component(wavingme.$$.fragment);
       t2 = space();
-      div2 = element("div");
+      div5 = element("div");
       div0 = element("div");
-      t3 = text("This  - is, me.");
+      t3 = text("This - is, me.");
       t4 = space();
       div1 = element("div");
-      t5 = text("I think it’s apparent I need to rethink my life a little bit.");
+      t5 = text("I'm an advanced mathematics major with a thesis in philosophy. I have 6 years of software\n			engineering experience, starting with php and jQuery, and (thankfully) continuing with Python,\n			NodeJS and React.");
+      t6 = space();
+      div2 = element("div");
+      t7 = text("When I'm not working with those, I dabble in game design as an excuse to use Vue, Svelte, C and a touch of Rust.");
+      t8 = space();
+      div3 = element("div");
+      t9 = text("I think it's apparent I need to rethink my life a little bit.");
+      t10 = space();
+      div4 = element("div");
       this.h();
     },
     l(nodes) {
@@ -1075,45 +1100,69 @@ function create_fragment$2(ctx) {
       t0 = claim_text(h1_nodes, "About me");
       h1_nodes.forEach(detach);
       t1 = claim_space(nodes);
-      div3 = claim_element(nodes, "DIV", { class: true });
-      var div3_nodes = children(div3);
-      claim_component(wavingme.$$.fragment, div3_nodes);
-      t2 = claim_space(div3_nodes);
-      div2 = claim_element(div3_nodes, "DIV", { class: true });
-      var div2_nodes = children(div2);
-      div0 = claim_element(div2_nodes, "DIV", { class: true });
+      div6 = claim_element(nodes, "DIV", { class: true });
+      var div6_nodes = children(div6);
+      claim_component(wavingme.$$.fragment, div6_nodes);
+      t2 = claim_space(div6_nodes);
+      div5 = claim_element(div6_nodes, "DIV", { class: true });
+      var div5_nodes = children(div5);
+      div0 = claim_element(div5_nodes, "DIV", { class: true });
       var div0_nodes = children(div0);
-      t3 = claim_text(div0_nodes, "This  - is, me.");
+      t3 = claim_text(div0_nodes, "This - is, me.");
       div0_nodes.forEach(detach);
-      t4 = claim_space(div2_nodes);
-      div1 = claim_element(div2_nodes, "DIV", { class: true });
+      t4 = claim_space(div5_nodes);
+      div1 = claim_element(div5_nodes, "DIV", { class: true });
       var div1_nodes = children(div1);
-      t5 = claim_text(div1_nodes, "I think it’s apparent I need to rethink my life a little bit.");
+      t5 = claim_text(div1_nodes, "I'm an advanced mathematics major with a thesis in philosophy. I have 6 years of software\n			engineering experience, starting with php and jQuery, and (thankfully) continuing with Python,\n			NodeJS and React.");
       div1_nodes.forEach(detach);
+      t6 = claim_space(div5_nodes);
+      div2 = claim_element(div5_nodes, "DIV", { class: true });
+      var div2_nodes = children(div2);
+      t7 = claim_text(div2_nodes, "When I'm not working with those, I dabble in game design as an excuse to use Vue, Svelte, C and a touch of Rust.");
       div2_nodes.forEach(detach);
+      t8 = claim_space(div5_nodes);
+      div3 = claim_element(div5_nodes, "DIV", { class: true });
+      var div3_nodes = children(div3);
+      t9 = claim_text(div3_nodes, "I think it's apparent I need to rethink my life a little bit.");
       div3_nodes.forEach(detach);
+      t10 = claim_space(div5_nodes);
+      div4 = claim_element(div5_nodes, "DIV", { class: true });
+      children(div4).forEach(detach);
+      div5_nodes.forEach(detach);
+      div6_nodes.forEach(detach);
       this.h();
     },
     h() {
-      attr(h1, "class", "svelte-x0hqh5");
-      attr(div0, "class", "svelte-x0hqh5");
-      attr(div1, "class", "svelte-x0hqh5");
-      attr(div2, "class", "aboutMeText svelte-x0hqh5");
-      attr(div3, "class", "aboutMeBox svelte-x0hqh5");
+      attr(h1, "class", "svelte-11fvzo3");
+      attr(div0, "class", "svelte-11fvzo3");
+      attr(div1, "class", "svelte-11fvzo3");
+      attr(div2, "class", "svelte-11fvzo3");
+      attr(div3, "class", "svelte-11fvzo3");
+      attr(div4, "class", "svelte-11fvzo3");
+      attr(div5, "class", "aboutMeText svelte-11fvzo3");
+      attr(div6, "class", "aboutMeBox svelte-11fvzo3");
     },
     m(target, anchor) {
       insert_hydration(target, h1, anchor);
       append_hydration(h1, t0);
       insert_hydration(target, t1, anchor);
-      insert_hydration(target, div3, anchor);
-      mount_component(wavingme, div3, null);
-      append_hydration(div3, t2);
-      append_hydration(div3, div2);
-      append_hydration(div2, div0);
+      insert_hydration(target, div6, anchor);
+      mount_component(wavingme, div6, null);
+      append_hydration(div6, t2);
+      append_hydration(div6, div5);
+      append_hydration(div5, div0);
       append_hydration(div0, t3);
-      append_hydration(div2, t4);
-      append_hydration(div2, div1);
+      append_hydration(div5, t4);
+      append_hydration(div5, div1);
       append_hydration(div1, t5);
+      append_hydration(div5, t6);
+      append_hydration(div5, div2);
+      append_hydration(div2, t7);
+      append_hydration(div5, t8);
+      append_hydration(div5, div3);
+      append_hydration(div3, t9);
+      append_hydration(div5, t10);
+      append_hydration(div5, div4);
       current = true;
     },
     p: noop,
@@ -1133,7 +1182,7 @@ function create_fragment$2(ctx) {
       if (detaching)
         detach(t1);
       if (detaching)
-        detach(div3);
+        detach(div6);
       destroy_component(wavingme);
     }
   };
@@ -1171,19 +1220,19 @@ function create_fragment$1(ctx) {
       t1 = space();
       div3 = element("div");
       div0 = element("div");
-      t2 = text("LinkedIn: ");
+      t2 = text("Gmail: ");
       a0 = element("a");
-      t3 = text("linkedin.com/in/midly/");
+      t3 = text("guessthetunegame@gmail.com");
       t4 = space();
       div1 = element("div");
-      t5 = text("Gmail: ");
+      t5 = text("GitHub: ");
       a1 = element("a");
-      t6 = text("guessthetunegame@gmail.com");
+      t6 = text("github.com/mit1mit1/");
       t7 = space();
       div2 = element("div");
-      t8 = text("GitHub: ");
+      t8 = text("LinkedIn: ");
       a2 = element("a");
-      t9 = text("github.com/mit1mit1/");
+      t9 = text("linkedin.com/in/midly/");
       this.h();
     },
     l(nodes) {
@@ -1196,28 +1245,28 @@ function create_fragment$1(ctx) {
       var div3_nodes = children(div3);
       div0 = claim_element(div3_nodes, "DIV", { class: true });
       var div0_nodes = children(div0);
-      t2 = claim_text(div0_nodes, "LinkedIn: ");
-      a0 = claim_element(div0_nodes, "A", { href: true, target: true });
+      t2 = claim_text(div0_nodes, "Gmail: ");
+      a0 = claim_element(div0_nodes, "A", { href: true });
       var a0_nodes = children(a0);
-      t3 = claim_text(a0_nodes, "linkedin.com/in/midly/");
+      t3 = claim_text(a0_nodes, "guessthetunegame@gmail.com");
       a0_nodes.forEach(detach);
       div0_nodes.forEach(detach);
       t4 = claim_space(div3_nodes);
       div1 = claim_element(div3_nodes, "DIV", { class: true });
       var div1_nodes = children(div1);
-      t5 = claim_text(div1_nodes, "Gmail: ");
-      a1 = claim_element(div1_nodes, "A", { href: true });
+      t5 = claim_text(div1_nodes, "GitHub: ");
+      a1 = claim_element(div1_nodes, "A", { href: true, target: true, rel: true });
       var a1_nodes = children(a1);
-      t6 = claim_text(a1_nodes, "guessthetunegame@gmail.com");
+      t6 = claim_text(a1_nodes, "github.com/mit1mit1/");
       a1_nodes.forEach(detach);
       div1_nodes.forEach(detach);
       t7 = claim_space(div3_nodes);
       div2 = claim_element(div3_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
-      t8 = claim_text(div2_nodes, "GitHub: ");
-      a2 = claim_element(div2_nodes, "A", { href: true, target: true });
+      t8 = claim_text(div2_nodes, "LinkedIn: ");
+      a2 = claim_element(div2_nodes, "A", { href: true, target: true, rel: true });
       var a2_nodes = children(a2);
-      t9 = claim_text(a2_nodes, "github.com/mit1mit1/");
+      t9 = claim_text(a2_nodes, "linkedin.com/in/midly/");
       a2_nodes.forEach(detach);
       div2_nodes.forEach(detach);
       div3_nodes.forEach(detach);
@@ -1225,13 +1274,15 @@ function create_fragment$1(ctx) {
     },
     h() {
       attr(h1, "class", "svelte-1st5ae3");
-      attr(a0, "href", "https://www.linkedin.com/in/midly/");
-      attr(a0, "target", "_blank");
+      attr(a0, "href", "mailto:guessthetunegame@gmail.com");
       attr(div0, "class", "svelte-1st5ae3");
-      attr(a1, "href", "mailto:guessthetunegame@gmail.com");
+      attr(a1, "href", "https://github.com/mit1mit1/");
+      attr(a1, "target", "_blank");
+      attr(a1, "rel", "noreferrer");
       attr(div1, "class", "svelte-1st5ae3");
-      attr(a2, "href", "https://github.com/mit1mit1/");
+      attr(a2, "href", "https://www.linkedin.com/in/midly/");
       attr(a2, "target", "_blank");
+      attr(a2, "rel", "noreferrer");
       attr(div2, "class", "svelte-1st5ae3");
       attr(div3, "class", "contactBox svelte-1st5ae3");
     },
@@ -1317,7 +1368,7 @@ function create_each_block(ctx) {
         /*tab*/
         ctx[4] === /*selectedTab*/
         ctx[0] ? "selectedTab" : ""
-      ) + " svelte-1ttzxz9");
+      ) + " svelte-11th3ln");
     },
     m(target, anchor) {
       insert_hydration(target, button, anchor);
@@ -1334,7 +1385,7 @@ function create_each_block(ctx) {
         /*tab*/
         ctx[4] === /*selectedTab*/
         ctx[0] ? "selectedTab" : ""
-      ) + " svelte-1ttzxz9")) {
+      ) + " svelte-11th3ln")) {
         attr(button, "class", button_class_value);
       }
     },
@@ -1467,7 +1518,9 @@ function create_if_block(ctx) {
   };
 }
 function create_fragment(ctx) {
-  let div;
+  let body;
+  let div1;
+  let div0;
   let ul;
   let t;
   let current_block_type_index;
@@ -1511,7 +1564,9 @@ function create_fragment(ctx) {
   }
   return {
     c() {
-      div = element("div");
+      body = element("body");
+      div1 = element("div");
+      div0 = element("div");
       ul = element("ul");
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
@@ -1522,33 +1577,47 @@ function create_fragment(ctx) {
       this.h();
     },
     l(nodes) {
-      div = claim_element(nodes, "DIV", { class: true });
-      var div_nodes = children(div);
-      ul = claim_element(div_nodes, "UL", { class: true });
+      body = claim_element(nodes, "BODY", {
+        class: true,
+        "data-sveltekit-preload-data": true
+      });
+      var body_nodes = children(body);
+      div1 = claim_element(body_nodes, "DIV", { style: true });
+      var div1_nodes = children(div1);
+      div0 = claim_element(div1_nodes, "DIV", { class: true });
+      var div0_nodes = children(div0);
+      ul = claim_element(div0_nodes, "UL", { class: true });
       var ul_nodes = children(ul);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].l(ul_nodes);
       }
       ul_nodes.forEach(detach);
-      t = claim_space(div_nodes);
+      t = claim_space(div0_nodes);
       if (if_block)
-        if_block.l(div_nodes);
-      div_nodes.forEach(detach);
+        if_block.l(div0_nodes);
+      div0_nodes.forEach(detach);
+      div1_nodes.forEach(detach);
+      body_nodes.forEach(detach);
       this.h();
     },
     h() {
-      attr(ul, "class", "navContainer svelte-1ttzxz9");
-      attr(div, "class", "pageContainer svelte-1ttzxz9");
+      attr(ul, "class", "navContainer svelte-11th3ln");
+      attr(div0, "class", "pageContainer svelte-11th3ln");
+      set_style(div1, "display", "contents");
+      attr(body, "class", "app svelte-11th3ln");
+      attr(body, "data-sveltekit-preload-data", "hover");
     },
     m(target, anchor) {
-      insert_hydration(target, div, anchor);
-      append_hydration(div, ul);
+      insert_hydration(target, body, anchor);
+      append_hydration(body, div1);
+      append_hydration(div1, div0);
+      append_hydration(div0, ul);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].m(ul, null);
       }
-      append_hydration(div, t);
+      append_hydration(div0, t);
       if (~current_block_type_index) {
-        if_blocks[current_block_type_index].m(div, null);
+        if_blocks[current_block_type_index].m(div0, null);
       }
       current = true;
     },
@@ -1590,7 +1659,7 @@ function create_fragment(ctx) {
             if_block.c();
           }
           transition_in(if_block, 1);
-          if_block.m(div, null);
+          if_block.m(div0, null);
         } else {
           if_block = null;
         }
@@ -1608,7 +1677,7 @@ function create_fragment(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(div);
+        detach(body);
       destroy_each(each_blocks, detaching);
       if (~current_block_type_index) {
         if_blocks[current_block_type_index].d();
@@ -1617,7 +1686,7 @@ function create_fragment(ctx) {
   };
 }
 function instance($$self, $$props, $$invalidate) {
-  const tabs = ["About me", "Projects", "Support us", "Contact"];
+  const tabs = ["About me", "Projects", "Contact", "Support us"];
   let selectedTab = "About me";
   const selectTab = (tab) => {
     $$invalidate(0, selectedTab = tab);
