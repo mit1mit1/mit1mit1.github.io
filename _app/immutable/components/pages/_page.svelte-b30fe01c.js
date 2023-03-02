@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, e as empty, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, H as append_hydration, C as noop, J as destroy_each, K as src_url_equal, L as svg_element, M as claim_svg_element, x as create_component, y as claim_component, z as mount_component, f as transition_in, t as transition_out, A as destroy_component, p as set_style, d as check_outros, N as null_to_empty, O as listen, g as group_outros } from "../../chunks/index-65ec6c55.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, H as append_hydration, C as noop, J as destroy_each, e as empty, K as src_url_equal, L as svg_element, M as claim_svg_element, x as create_component, y as claim_component, z as mount_component, f as transition_in, t as transition_out, A as destroy_component, p as set_style, d as check_outros, N as null_to_empty, O as listen, g as group_outros } from "../../chunks/index-65ec6c55.js";
 import { b as base } from "../../chunks/paths-0de5170f.js";
 const projectList = [
   {
@@ -95,7 +95,7 @@ function create_else_block_1(ctx) {
       this.h();
     },
     h() {
-      attr(img, "class", "boxIcon svelte-zc2t6y");
+      attr(img, "class", "boxIcon svelte-azxuqt");
       if (!src_url_equal(img.src, img_src_value = `${base}/images/${/*project*/
       ctx[0].iconName}`))
         attr(img, "src", img_src_value);
@@ -135,7 +135,7 @@ function create_if_block_3$1(ctx) {
       this.h();
     },
     h() {
-      attr(img, "class", "boxIcon svelte-zc2t6y");
+      attr(img, "class", "boxIcon svelte-azxuqt");
       if (!src_url_equal(img.src, img_src_value = `${base}/images/${/*project*/
       ctx[0].iconName}`))
         attr(img, "src", img_src_value);
@@ -149,7 +149,7 @@ function create_if_block_3$1(ctx) {
       );
       attr(a, "target", "_blank");
       attr(a, "rel", "noreferrer");
-      attr(a, "class", "svelte-zc2t6y");
+      attr(a, "class", "svelte-azxuqt");
     },
     m(target, anchor) {
       insert_hydration(target, a, anchor);
@@ -219,7 +219,7 @@ function create_if_block_1$1(ctx) {
       );
       attr(a, "target", "_blank");
       attr(a, "rel", "noreferrer");
-      attr(a, "class", "svelte-zc2t6y");
+      attr(a, "class", "svelte-azxuqt");
     },
     m(target, anchor) {
       insert_hydration(target, a, anchor);
@@ -253,7 +253,7 @@ function create_if_block$1(ctx) {
       this.h();
     },
     h() {
-      attr(div, "class", "svelte-zc2t6y");
+      attr(div, "class", "svelte-azxuqt");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
@@ -350,7 +350,7 @@ function create_each_block$1(ctx) {
       this.h();
     },
     h() {
-      attr(h2, "class", "projectTitle svelte-zc2t6y");
+      attr(h2, "class", "projectTitle svelte-azxuqt");
       attr(
         a,
         "href",
@@ -359,9 +359,9 @@ function create_each_block$1(ctx) {
       );
       attr(a, "target", "_blank");
       attr(a, "rel", "noreferrer");
-      attr(div0, "class", "svelte-zc2t6y");
-      attr(div1, "class", "detailsBox svelte-zc2t6y");
-      attr(div2, "class", "projectBox svelte-zc2t6y");
+      attr(div0, "class", "svelte-azxuqt");
+      attr(div1, "class", "detailsBox svelte-azxuqt");
+      attr(div2, "class", "projectBox svelte-azxuqt");
     },
     m(target, anchor) {
       insert_hydration(target, div2, anchor);
@@ -409,10 +409,10 @@ function create_fragment$5(ctx) {
   let h1;
   let t0;
   let t1;
-  let div;
+  let div0;
   let t2;
   let t3;
-  let each_1_anchor;
+  let div1;
   let each_value = projectList;
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
@@ -423,13 +423,13 @@ function create_fragment$5(ctx) {
       h1 = element("h1");
       t0 = text("Projects");
       t1 = space();
-      div = element("div");
+      div0 = element("div");
       t2 = text("In decreasing order of polish");
       t3 = space();
+      div1 = element("div");
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      each_1_anchor = empty();
       this.h();
     },
     l(nodes) {
@@ -438,32 +438,35 @@ function create_fragment$5(ctx) {
       t0 = claim_text(h1_nodes, "Projects");
       h1_nodes.forEach(detach);
       t1 = claim_space(nodes);
-      div = claim_element(nodes, "DIV", { class: true });
-      var div_nodes = children(div);
-      t2 = claim_text(div_nodes, "In decreasing order of polish");
-      div_nodes.forEach(detach);
+      div0 = claim_element(nodes, "DIV", { class: true });
+      var div0_nodes = children(div0);
+      t2 = claim_text(div0_nodes, "In decreasing order of polish");
+      div0_nodes.forEach(detach);
       t3 = claim_space(nodes);
+      div1 = claim_element(nodes, "DIV", { class: true });
+      var div1_nodes = children(div1);
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].l(nodes);
+        each_blocks[i].l(div1_nodes);
       }
-      each_1_anchor = empty();
+      div1_nodes.forEach(detach);
       this.h();
     },
     h() {
-      attr(h1, "class", "svelte-zc2t6y");
-      attr(div, "class", "subheading svelte-zc2t6y");
+      attr(h1, "class", "svelte-azxuqt");
+      attr(div0, "class", "subheading svelte-azxuqt");
+      attr(div1, "class", "projectsContainer");
     },
     m(target, anchor) {
       insert_hydration(target, h1, anchor);
       append_hydration(h1, t0);
       insert_hydration(target, t1, anchor);
-      insert_hydration(target, div, anchor);
-      append_hydration(div, t2);
+      insert_hydration(target, div0, anchor);
+      append_hydration(div0, t2);
       insert_hydration(target, t3, anchor);
+      insert_hydration(target, div1, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].m(target, anchor);
+        each_blocks[i].m(div1, null);
       }
-      insert_hydration(target, each_1_anchor, anchor);
     },
     p(ctx2, [dirty]) {
       if (dirty & /*projectList, prettifyAddress, base*/
@@ -477,7 +480,7 @@ function create_fragment$5(ctx) {
           } else {
             each_blocks[i] = create_each_block$1(child_ctx);
             each_blocks[i].c();
-            each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+            each_blocks[i].m(div1, null);
           }
         }
         for (; i < each_blocks.length; i += 1) {
@@ -494,12 +497,12 @@ function create_fragment$5(ctx) {
       if (detaching)
         detach(t1);
       if (detaching)
-        detach(div);
+        detach(div0);
       if (detaching)
         detach(t3);
-      destroy_each(each_blocks, detaching);
       if (detaching)
-        detach(each_1_anchor);
+        detach(div1);
+      destroy_each(each_blocks, detaching);
     }
   };
 }
@@ -1368,7 +1371,7 @@ function create_each_block(ctx) {
         /*tab*/
         ctx[4] === /*selectedTab*/
         ctx[0] ? "selectedTab" : ""
-      ) + " svelte-1smlr3n");
+      ) + " svelte-1cf0rx2");
     },
     m(target, anchor) {
       insert_hydration(target, button, anchor);
@@ -1385,7 +1388,7 @@ function create_each_block(ctx) {
         /*tab*/
         ctx[4] === /*selectedTab*/
         ctx[0] ? "selectedTab" : ""
-      ) + " svelte-1smlr3n")) {
+      ) + " svelte-1cf0rx2")) {
         attr(button, "class", button_class_value);
       }
     },
@@ -1601,10 +1604,10 @@ function create_fragment(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "navContainer svelte-1smlr3n");
-      attr(div1, "class", "pageContainer svelte-1smlr3n");
+      attr(div0, "class", "navContainer svelte-1cf0rx2");
+      attr(div1, "class", "pageContainer svelte-1cf0rx2");
       set_style(div2, "display", "contents");
-      attr(body, "class", "app svelte-1smlr3n");
+      attr(body, "class", "app svelte-1cf0rx2");
       attr(body, "data-sveltekit-preload-data", "hover");
     },
     m(target, anchor) {
