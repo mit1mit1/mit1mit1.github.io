@@ -1371,7 +1371,7 @@ function create_each_block(ctx) {
         /*tab*/
         ctx[4] === /*selectedTab*/
         ctx[0] ? "selectedTab" : ""
-      ) + " svelte-1cf0rx2");
+      ) + " svelte-pogzen");
     },
     m(target, anchor) {
       insert_hydration(target, button, anchor);
@@ -1388,7 +1388,7 @@ function create_each_block(ctx) {
         /*tab*/
         ctx[4] === /*selectedTab*/
         ctx[0] ? "selectedTab" : ""
-      ) + " svelte-1cf0rx2")) {
+      ) + " svelte-pogzen")) {
         attr(button, "class", button_class_value);
       }
     },
@@ -1604,10 +1604,10 @@ function create_fragment(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "navContainer svelte-1cf0rx2");
-      attr(div1, "class", "pageContainer svelte-1cf0rx2");
+      attr(div0, "class", "navContainer svelte-pogzen");
+      attr(div1, "class", "pageContainer svelte-pogzen");
       set_style(div2, "display", "contents");
-      attr(body, "class", "app svelte-1cf0rx2");
+      attr(body, "class", "app svelte-pogzen");
       attr(body, "data-sveltekit-preload-data", "hover");
     },
     m(target, anchor) {
