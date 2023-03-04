@@ -539,7 +539,7 @@ function create_fragment$4(ctx) {
   return {
     c() {
       h1 = element("h1");
-      t0 = text("Support us");
+      t0 = text("Support");
       t1 = space();
       div2 = element("div");
       div0 = element("div");
@@ -565,7 +565,7 @@ function create_fragment$4(ctx) {
     l(nodes) {
       h1 = claim_element(nodes, "H1", { class: true });
       var h1_nodes = children(h1);
-      t0 = claim_text(h1_nodes, "Support us");
+      t0 = claim_text(h1_nodes, "Support");
       h1_nodes.forEach(detach);
       t1 = claim_space(nodes);
       div2 = claim_element(nodes, "DIV", { class: true });
@@ -1527,7 +1527,7 @@ function create_fragment(ctx) {
       return 1;
     if (
       /*selectedTab*/
-      ctx2[0] === "Support us"
+      ctx2[0] === "Support"
     )
       return 2;
     if (
@@ -1664,7 +1664,7 @@ function create_fragment(ctx) {
   };
 }
 function instance($$self, $$props, $$invalidate) {
-  const tabs = ["About me", "Projects", "Contact", "Support us"];
+  const tabs = ["About me", "Projects", "Contact", "Support"];
   let selectedTab = "About me";
   const selectTab = (tab) => {
     $$invalidate(0, selectedTab = tab);
