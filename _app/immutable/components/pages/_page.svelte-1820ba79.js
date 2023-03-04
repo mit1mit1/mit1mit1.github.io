@@ -1054,10 +1054,10 @@ function create_fragment$2(ctx) {
   let h1;
   let t0;
   let t1;
-  let div6;
+  let div4;
   let wavingme;
   let t2;
-  let div5;
+  let div3;
   let div0;
   let t3;
   let t4;
@@ -1066,11 +1066,6 @@ function create_fragment$2(ctx) {
   let t6;
   let div2;
   let t7;
-  let t8;
-  let div3;
-  let t9;
-  let t10;
-  let div4;
   let current;
   wavingme = new WavingMe({});
   return {
@@ -1078,10 +1073,10 @@ function create_fragment$2(ctx) {
       h1 = element("h1");
       t0 = text("About me");
       t1 = space();
-      div6 = element("div");
+      div4 = element("div");
       create_component(wavingme.$$.fragment);
       t2 = space();
-      div5 = element("div");
+      div3 = element("div");
       div0 = element("div");
       t3 = text("This - is, me.");
       t4 = space();
@@ -1089,12 +1084,7 @@ function create_fragment$2(ctx) {
       t5 = text("I'm an advanced mathematics major with a thesis in philosophy. I have 6 years of software\n			engineering experience, starting with php and jQuery, and (thankfully) continuing with Python,\n			NodeJS and React.");
       t6 = space();
       div2 = element("div");
-      t7 = text("When I'm not working with those, I dabble in game design as an excuse to use Vue, Svelte, C and a touch of Rust.");
-      t8 = space();
-      div3 = element("div");
-      t9 = text("I think it's apparent I need to rethink my life a little bit.");
-      t10 = space();
-      div4 = element("div");
+      t7 = text("When I'm not working with those, I dabble in game design as an excuse to use Vue, Svelte, C\n			and a touch of Rust.");
       this.h();
     },
     l(nodes) {
@@ -1103,36 +1093,28 @@ function create_fragment$2(ctx) {
       t0 = claim_text(h1_nodes, "About me");
       h1_nodes.forEach(detach);
       t1 = claim_space(nodes);
-      div6 = claim_element(nodes, "DIV", { class: true });
-      var div6_nodes = children(div6);
-      claim_component(wavingme.$$.fragment, div6_nodes);
-      t2 = claim_space(div6_nodes);
-      div5 = claim_element(div6_nodes, "DIV", { class: true });
-      var div5_nodes = children(div5);
-      div0 = claim_element(div5_nodes, "DIV", { class: true });
+      div4 = claim_element(nodes, "DIV", { class: true });
+      var div4_nodes = children(div4);
+      claim_component(wavingme.$$.fragment, div4_nodes);
+      t2 = claim_space(div4_nodes);
+      div3 = claim_element(div4_nodes, "DIV", { class: true });
+      var div3_nodes = children(div3);
+      div0 = claim_element(div3_nodes, "DIV", { class: true });
       var div0_nodes = children(div0);
       t3 = claim_text(div0_nodes, "This - is, me.");
       div0_nodes.forEach(detach);
-      t4 = claim_space(div5_nodes);
-      div1 = claim_element(div5_nodes, "DIV", { class: true });
+      t4 = claim_space(div3_nodes);
+      div1 = claim_element(div3_nodes, "DIV", { class: true });
       var div1_nodes = children(div1);
       t5 = claim_text(div1_nodes, "I'm an advanced mathematics major with a thesis in philosophy. I have 6 years of software\n			engineering experience, starting with php and jQuery, and (thankfully) continuing with Python,\n			NodeJS and React.");
       div1_nodes.forEach(detach);
-      t6 = claim_space(div5_nodes);
-      div2 = claim_element(div5_nodes, "DIV", { class: true });
+      t6 = claim_space(div3_nodes);
+      div2 = claim_element(div3_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
-      t7 = claim_text(div2_nodes, "When I'm not working with those, I dabble in game design as an excuse to use Vue, Svelte, C and a touch of Rust.");
+      t7 = claim_text(div2_nodes, "When I'm not working with those, I dabble in game design as an excuse to use Vue, Svelte, C\n			and a touch of Rust.");
       div2_nodes.forEach(detach);
-      t8 = claim_space(div5_nodes);
-      div3 = claim_element(div5_nodes, "DIV", { class: true });
-      var div3_nodes = children(div3);
-      t9 = claim_text(div3_nodes, "I think it's apparent I need to rethink my life a little bit.");
       div3_nodes.forEach(detach);
-      t10 = claim_space(div5_nodes);
-      div4 = claim_element(div5_nodes, "DIV", { class: true });
-      children(div4).forEach(detach);
-      div5_nodes.forEach(detach);
-      div6_nodes.forEach(detach);
+      div4_nodes.forEach(detach);
       this.h();
     },
     h() {
@@ -1140,32 +1122,25 @@ function create_fragment$2(ctx) {
       attr(div0, "class", "svelte-1ap565a");
       attr(div1, "class", "svelte-1ap565a");
       attr(div2, "class", "svelte-1ap565a");
-      attr(div3, "class", "svelte-1ap565a");
-      attr(div4, "class", "svelte-1ap565a");
-      attr(div5, "class", "aboutMeText svelte-1ap565a");
-      attr(div6, "class", "aboutMeBox svelte-1ap565a");
+      attr(div3, "class", "aboutMeText svelte-1ap565a");
+      attr(div4, "class", "aboutMeBox svelte-1ap565a");
     },
     m(target, anchor) {
       insert_hydration(target, h1, anchor);
       append_hydration(h1, t0);
       insert_hydration(target, t1, anchor);
-      insert_hydration(target, div6, anchor);
-      mount_component(wavingme, div6, null);
-      append_hydration(div6, t2);
-      append_hydration(div6, div5);
-      append_hydration(div5, div0);
+      insert_hydration(target, div4, anchor);
+      mount_component(wavingme, div4, null);
+      append_hydration(div4, t2);
+      append_hydration(div4, div3);
+      append_hydration(div3, div0);
       append_hydration(div0, t3);
-      append_hydration(div5, t4);
-      append_hydration(div5, div1);
+      append_hydration(div3, t4);
+      append_hydration(div3, div1);
       append_hydration(div1, t5);
-      append_hydration(div5, t6);
-      append_hydration(div5, div2);
+      append_hydration(div3, t6);
+      append_hydration(div3, div2);
       append_hydration(div2, t7);
-      append_hydration(div5, t8);
-      append_hydration(div5, div3);
-      append_hydration(div3, t9);
-      append_hydration(div5, t10);
-      append_hydration(div5, div4);
       current = true;
     },
     p: noop,
@@ -1185,7 +1160,7 @@ function create_fragment$2(ctx) {
       if (detaching)
         detach(t1);
       if (detaching)
-        detach(div6);
+        detach(div4);
       destroy_component(wavingme);
     }
   };
