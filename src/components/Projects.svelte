@@ -9,30 +9,33 @@
 <div class="projectsContainer">
 	{#each projectList as project}
 		<div class="projectBox">
-			<h2 class="projectTitle">
-				{#if project.iconName}
-					{#if project.siteAddress}
-						<a href={project.siteAddress} target="_blank" rel="noreferrer">
+			{#if project.siteAddress}
+				<a href={project.siteAddress} target="_blank" rel="noreferrer">
+					<h2 class="projectTitle">
+						{#if project.iconName}
 							<img
 								class="boxIcon"
 								src={`${base}/images/${project.iconName}`}
 								alt={`Picture of ${project.name}`}
 							/>
-						</a>
-					{:else}
-						<img
-							class="boxIcon"
-							src={`${base}/images/${project.iconName}`}
-							alt={`Picture of ${project.name}`}
-						/>
-					{/if}
-				{/if}
-				{#if project.siteAddress}
-					<a href={project.siteAddress} target="_blank" rel="noreferrer">{project.name}</a>
-				{:else}
-					{project.name}
-				{/if}
-			</h2>
+						{/if}
+						<span>{project.name}</span>
+					</h2>
+				</a>
+			{:else}
+				<span>
+					<h2 class="projectTitle">
+						{#if project.iconName}
+							<img
+								class="boxIcon"
+								src={`${base}/images/${project.iconName}`}
+								alt={`Picture of ${project.name}`}
+							/>
+						{/if}
+						<span>{project.name}</span>
+					</h2>
+				</span>
+			{/if}
 			<div class="detailsBox">
 				{#if project.githubAddress}
 					<div>
@@ -74,7 +77,7 @@
 		display: flex;
 	}
 
-	.projectTitle a {
+	.projectTitle {
 		margin-right: 10px;
 		align-items: center;
 		display: flex;
@@ -85,9 +88,10 @@
 	}
 
 	.boxIcon {
-		max-width: 40px;
-		max-height: 40px;
+		width: 40px;
+		height: 40px;
 		vertical-align: bottom;
+		margin-right: 10px;
 	}
 
 	h1 {

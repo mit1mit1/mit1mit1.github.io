@@ -17,7 +17,7 @@
 	};
 </script>
 
-<body class="app" data-sveltekit-preload-data="hover">
+<div class="appContainer" data-sveltekit-preload-data="hover">
 	<div class={`navContainer ${expandedContainer ? 'expandedContainer' : ''}`}>
 		{#each tabs as tab}
 			<button on:click={() => selectTab(tab)} class={tab === selectedTab ? 'selectedTab' : ''}>
@@ -41,7 +41,7 @@
 			{/if}
 		</div>
 	</div>
-</body>
+</div>
 
 <style>
 	.buttonIcon {
@@ -122,17 +122,13 @@
 		margin-right: 18px;
 		font-family: Quicksand;
 	}
-	@media (max-width: 640px) {
-		.pageContainer {
-		}
-	}
 	@media (max-width: 270px) {
 		.pageContainer {
 			overflow-wrap: anywhere;
 		}
 	}
 
-	.app {
+	html {
 		background-color: #f8f8f8;
 		min-height: 100%;
 		margin: 0px;
