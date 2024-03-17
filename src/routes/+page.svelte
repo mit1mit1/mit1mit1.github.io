@@ -127,10 +127,4 @@
 			overflow-wrap: anywhere;
 		}
 	}
-
-	html {
-		background-color: #f8f8f8;
-		min-height: 100%;
-		margin: 0px;
-	}
 </style>
