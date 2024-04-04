@@ -5,4 +5,5 @@ export type ProjectInfo = {
 	siteAddress?: string;
 	iconName?: string;
 	needsBackground?: boolean;
+	fadeInSpeed: 'slow' | 'medium' | 'fast';
 };

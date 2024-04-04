@@ -6,14 +6,16 @@ export const projectList: Array<ProjectInfo> = [
 		description: 'A wordle-like game designed to teach sheet music reading.',
 		githubAddress: 'https://github.com/mit1mit1/guess-the-tune',
 		siteAddress: 'https://mit1mit1.github.io/guess-the-tune',
-		iconName: 'musicle.ico'
+		iconName: 'musicle.ico',
+		fadeInSpeed: 'medium'
 	},
 	{
 		name: 'Newtonian Dog Fighter',
 		description: 'Fly small circles around bigger ones and run into each other.',
 		githubAddress: 'https://github.com/mit1mit1/newtonian-dog-fighter-3000',
 		siteAddress: 'https://mit1mit1.github.io/newtonian-dog-fighter-3000',
-		iconName: 'newtonian.png'
+		iconName: 'newtonian.png',
+		fadeInSpeed: 'slow'
 	},
 	{
 		name: 'Software Dev Resources',
@@ -22,6 +24,7 @@ export const projectList: Array<ProjectInfo> = [
 		siteAddress: 'https://mit1mit1.github.io/software-dev-resources',
 		iconName: 'beanie.ico',
 		needsBackground: true,
+		fadeInSpeed: 'fast'
 	},
 	{
 		name: 'Explomandlebrot',
@@ -29,7 +32,8 @@ export const projectList: Array<ProjectInfo> = [
 			'An audio-visual fractal experience. Slide around the Mandlebrot set while listening to music generated from it.',
 		githubAddress: 'https://github.com/mit1mit1/explomandlebrot',
 		siteAddress: 'https://mit1mit1.github.io/explomandlebrot',
-		iconName: 'mandlebrot.ico'
+		iconName: 'mandlebrot.ico',
+		fadeInSpeed: 'medium'
 	},
 	{
 		name: 'Napoleonic Chess Simulator',
@@ -39,5 +43,6 @@ export const projectList: Array<ProjectInfo> = [
 		siteAddress: 'https://mit1mit1.github.io/napoleonic-chess-simulator-3000',
 		iconName: 'Napoleon.svg',
 		needsBackground: true,
+		fadeInSpeed: 'slow'
 	}
 ];

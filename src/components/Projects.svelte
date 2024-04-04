@@ -8,7 +8,11 @@
 <div class="subheading">In decreasing order of polish</div>
 <div class="projectsContainer">
 	{#each projectList as project}
-		<div class="projectBox">
+		<div
+			class={`projectBox ${project.fadeInSpeed === 'slow' && 'slowFade'} ${
+				project.fadeInSpeed === 'medium' && 'mediumFade'
+			} ${project.fadeInSpeed === 'fast' && 'fastFade'}`}
+		>
 			{#if project.siteAddress}
 				<a href={project.siteAddress} target="_blank" rel="noreferrer">
 					<h2 class="projectTitle">
@@ -62,6 +66,27 @@
 		.projectsContainer {
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		}
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.slowFade {
+		animation: fadeIn 2s;
+	}
+
+	.mediumFade {
+		animation: fadeIn 1s;
+	}
+
+	.fastFade {
+		animation: fadeIn 0.5s;
 	}
 
 	.projectBox {
