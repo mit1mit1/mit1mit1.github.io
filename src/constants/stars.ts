@@ -3,6 +3,7 @@ interface Star {
 	y: number;
 	radius: number;
 	class?: string;
+	fill: string;
 }
 
 const starClasses = [
@@ -10,18 +11,29 @@ const starClasses = [
 	'animate-flicker-11',
 	'animate-flicker-13',
 	'animate-flicker-17',
-	'animate-flicker-19',
+	'animate-flicker-19'
 ];
+
+const starBoxPixelWidth = 3840;
+const starBoxPixelHeight = 2160;
+
+const starBoxRatioPixelViewport = 8;
+
+export const starBoxViewWidth = starBoxPixelWidth / starBoxRatioPixelViewport;
+export const starBoxViewHeight = starBoxPixelHeight / starBoxRatioPixelViewport;
 
 const tempStars: Star[] = [];
 
 let starIndex = 0;
 while (starIndex < 1000) {
 	tempStars.push({
-		x: Math.random() * 480,
-		y: Math.random() * 270,
-		radius: Math.random() / 8,
-		class: starClasses[Math.floor(Math.random() * starClasses.length)]
+		x: Math.random() * starBoxViewWidth,
+		y: Math.random() * starBoxViewHeight,
+		radius: (Math.random() + 1) / (2 * starBoxRatioPixelViewport),
+		class: starClasses[Math.floor(Math.random() * starClasses.length)],
+		fill: `rgb(${200 + Math.floor(Math.random() * 54)}, ${200 + Math.floor(Math.random() * 54)}, ${
+			200 + Math.floor(Math.random() * 54)
+		})`
 	});
 	starIndex++;
 }

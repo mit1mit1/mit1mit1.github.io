@@ -21,7 +21,7 @@
 <div class="pageHolder">
 	<svg id="boxOfStars" viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
 		{#each [...stars] as star}
-			<circle cx={star.x} cy={star.y} r={star.radius} class={star.class} fill="white" />
+			<circle cx={star.x} cy={star.y} r={star.radius} class={star.class} fill={star.fill} />
 		{/each}
 	</svg>
 </div>
