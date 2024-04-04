@@ -1,18 +1,20 @@
 <script lang="ts">
 	import { stars } from '../constants/stars';
 	import { goto } from '$app/navigation';
+	import '@fortawesome/fontawesome-free/css/all.min.css';
 
 	interface Tab {
 		name: string;
 		route: string;
+		iconClass: string;
 	}
 	const tabs: Tab[] = [
-		{ name: 'About me', route: '' },
-		{ name: 'Personal projects', route: 'projects' },
-		{ name: 'Contact', route: 'contact' },
-		{ name: 'Support', route: 'support' }
+		{ iconClass: 'fa-solid fa-home', name: 'Home', route: '' },
+		{ iconClass: 'fa-solid fa-screwdriver-wrench', name: 'Personal projects', route: 'projects' },
+		{ iconClass: 'fa-solid fa-envelope', name: 'Contact', route: 'contact' },
+		{ iconClass: 'fa-solid fa-handshake', name: 'Support', route: 'support' }
 	];
-	let selectedTab = { name: 'About me', route: '' };
+	let selectedTab = { name: 'Home', route: '' };
 	let expandedContainer = false;
 
 	const selectTab = (tab: Tab) => {
@@ -59,7 +61,10 @@
 				{#if tab.name === selectedTab.name && expandedContainer === false}
 					<i class="fa-solid fa-bars phoneOnly buttonIcon" />
 				{/if}
-				{tab.name}
+				{#if tab.iconClass}
+					<i class={tab.iconClass} />
+				{/if}
+				<!-- {tab.name} -->
 			</button>
 		{/each}
 	</div>
@@ -113,7 +118,8 @@
 
 	@media (min-width: 800px) {
 		.navContainer {
-			float: right;
+			position: absolute;
+			right: 10px;
 			flex-direction: column;
 		}
 	}

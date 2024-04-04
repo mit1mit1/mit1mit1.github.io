@@ -39,13 +39,17 @@
 			opacity: 0;
 		}
 		100% {
+			left: 0;
 			opacity: 1;
 		}
 	}
 
 	.aboutMeBox {
 		display: flex;
-		animation: fadeIn 1s;
+		position: absolute;
+		left: -25px;
+		animation: fadeIn 1s forwards;
+		-webkit-animation: fadeIn 1s forwards;
 	}
 
 	.aboutMeBox div {
