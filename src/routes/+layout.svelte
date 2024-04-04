@@ -15,14 +15,14 @@
 		{ iconClass: 'fa-solid fa-handshake', name: 'Support', route: 'support' }
 	];
 	let selectedTab = { name: 'Home', route: '' };
-	let expandedContainer = false;
+	// let expandedContainer = false;
 
 	const selectTab = (tab: Tab) => {
-		if (selectedTab.name === tab.name && expandedContainer === false) {
-			expandedContainer = true;
-		} else {
-			expandedContainer = false;
-		}
+		// if (selectedTab.name === tab.name && expandedContainer === false) {
+		// 	expandedContainer = true;
+		// } else {
+		// 	expandedContainer = false;
+		// }
 		selectedTab = tab;
 		goto(`/${tab.route}`);
 	};
@@ -52,15 +52,12 @@
 	</svg>
 </div>
 <div class="appContainer" data-sveltekit-preload-data="hover">
-	<div class={`navContainer ${expandedContainer ? 'expandedContainer' : ''}`}>
+	<div class="navContainer">
 		{#each tabs as tab}
 			<button
 				on:click={() => selectTab(tab)}
 				class={tab.name === selectedTab.name ? 'selectedTab' : ''}
 			>
-				{#if tab.name === selectedTab.name && expandedContainer === false}
-					<i class="fa-solid fa-bars phoneOnly buttonIcon" />
-				{/if}
 				{#if tab.iconClass}
 					<i class={tab.iconClass} />
 				{/if}
@@ -94,11 +91,11 @@
 
 	:global(h1) {
 		font-family: 'Architects Daughter';
-		display: none;
+		display: block;
 	}
-	@media (min-width: 500px) {
+	@media (min-width: 800px) {
 		:global(h1) {
-			display: block;
+			margin-top: 0px;
 		}
 	}
 
@@ -106,16 +103,10 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: space-evenly;
 	}
-	@media (min-width: 500px) {
-		.navContainer {
-			display: flex;
-			justify-content: space-evenly;
-			margin-bottom: 0px;
-		}
-	}
-
 	@media (min-width: 800px) {
 		.navContainer {
 			position: absolute;
@@ -137,21 +128,11 @@
 		min-height: 50px;
 		overflow: hidden;
 		transition: max-height 0.5s ease-out;
-		display: none;
 		opacity: 80%;
-	}
-	@media (min-width: 500px) {
-		.navContainer button {
-			display: inline-block;
-		}
-	}
-
-	.navContainer button.selectedTab {
 		display: inline-block;
 	}
 
-	.navContainer.expandedContainer button {
-		transition: max-height 0.5s ease-out;
+	.navContainer button.selectedTab {
 		display: inline-block;
 	}
 
