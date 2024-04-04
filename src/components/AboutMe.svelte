@@ -1,14 +1,18 @@
 <script setup lang="ts">
-	import WavingMe from './WavingMe.svelte';
+	// import WavingMe from './WavingMe.svelte';
+	import { base } from '$app/paths';
+
+	const yearsExperience = new Date().getFullYear() - 2017;
 </script>
 
 <h1>About me</h1>
 <div class="aboutMeBox">
-	<WavingMe />
+	<img class="mitchMug" src={`${base}/images/yellGlowClear.png`} alt="Another nutjob" />
+	<!-- <WavingMe /> -->
 	<div class="aboutMeText">
 		<div>Hi there! I'm Mitch. I like to wear beanies, if you can't tell.</div>
 		<div>
-			I have around 7 years of experience building fullstack apps for administration and finance. I mostly work in
+			I have around {yearsExperience} years of experience building fullstack apps for administration and finance. I mostly work in
 			Typescript and Python.
 		</div>
 		<div>
@@ -23,6 +27,13 @@
 </div>
 
 <style>
+	.mitchMug {
+		width: 130px;
+		height: 130px;
+		border-radius: 130px;
+		padding: 10px;
+	}
+
 	.aboutMeBox {
 		display: flex;
 	}

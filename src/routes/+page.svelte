@@ -4,6 +4,8 @@
 	import AboutMe from '../components/AboutMe.svelte';
 	import Contact from '../components/Contact.svelte';
 	import { stars } from '../constants/stars';
+	import { base } from '$app/paths';
+
 	const tabs = ['About me', 'Personal projects', 'Contact', 'Support'];
 	let selectedTab = 'About me';
 	let expandedContainer = false;
@@ -19,6 +21,7 @@
 </script>
 
 <div class="pageHolder">
+	<img class="mitchClouds" src={`${base}/images/smileGlowBaW.png`} alt="A nutjob" />
 	<svg id="boxOfStars" viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
 		{#each [...stars] as star}
 			<circle cx={star.x} cy={star.y} r={star.radius} class={star.class} fill={star.fill} />
@@ -52,6 +55,11 @@
 </div>
 
 <style>
+	.appContainer {
+		padding-inline: 10px;
+		padding-block: 20px;
+	}
+
 	.buttonIcon {
 		float: left;
 		padding-top: 2px;
@@ -87,6 +95,13 @@
 		}
 	}
 
+	@media (min-width: 800px) {
+		.navContainer {
+			float: right;
+			flex-direction: column;
+		}
+	}
+
 	.navContainer button {
 		margin-bottom: 5px;
 		transition-duration: 0.4s;
@@ -101,6 +116,7 @@
 		overflow: hidden;
 		transition: max-height 0.5s ease-out;
 		display: none;
+		opacity: 80%;
 	}
 	@media (min-width: 500px) {
 		.navContainer button {
@@ -151,6 +167,16 @@
 		width: 3840px;
 		height: 2160px;
 		z-index: -1;
+		overflow: hidden;
+	}
+
+	.mitchClouds {
+		z-index: -1;
+		position: relative;
+		display: block;
+		position: inherit;
+		width: 2500px;
+		z-index: -2;
 		overflow: hidden;
 	}
 

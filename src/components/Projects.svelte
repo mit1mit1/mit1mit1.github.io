@@ -95,7 +95,7 @@
 	}
 
 	.withBackground {
-		background-color: #f7f8e8;
+		background-color: #d7d8c7;
 		border-radius: 10px;
 	}
 
