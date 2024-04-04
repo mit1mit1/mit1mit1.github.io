@@ -7,13 +7,13 @@
 
 <h1>About me</h1>
 <div class="aboutMeBox">
-	<img class="mitchMug" src={`${base}/images/yellGlowClear.png`} alt="Another nutjob" />
+	<enhanced:img class="mitchMug" src="/static/images/yellGlowClear.png" alt="Another nutjob" />
 	<!-- <WavingMe /> -->
 	<div class="aboutMeText">
 		<div>Hi there! I'm Mitch. I like to wear beanies, if you can't tell.</div>
 		<div>
-			I have around {yearsExperience} years of experience building fullstack apps for administration and finance. I mostly work in
-			Typescript and Python.
+			I have around {yearsExperience} years of experience building fullstack apps for administration
+			and finance. I mostly work in Typescript and Python.
 		</div>
 		<div>
 			When I'm not officially working, I dabble in music and math flavoured projects as an excuse to

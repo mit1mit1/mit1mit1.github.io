@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { stars } from '../constants/stars';
-	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
-	const getRoute = (tab: string) => {
-		if (tab === 'About') return '';
-	};
 
 	interface Tab {
 		name: string;
@@ -31,7 +27,22 @@
 </script>
 
 <div class="pageHolder">
-	<img class="mitchClouds" src={`${base}/images/smileGlowBaW.png`} alt="A nutjob" />
+	<enhanced:img class="mitchClouds" src="/static/images/smileGlowBaW.png" alt="A nutjob" />
+	<enhanced:img
+		class="mitchClouds secondCloud"
+		src="/static/images/smileGlowBaW.png"
+		alt="A nutjob"
+	/>
+	<enhanced:img
+		class="mitchClouds thirdCloud"
+		src="/static/images/smileGlowBaW.png"
+		alt="A nutjob"
+	/>
+	<enhanced:img
+		class="mitchClouds fourthCloud"
+		src="/static/images/smileGlowBaW.png"
+		alt="A nutjob"
+	/>
 	<svg id="boxOfStars" viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
 		{#each [...stars] as star}
 			<circle cx={star.x} cy={star.y} r={star.radius} class={star.class} fill={star.fill} />
@@ -166,7 +177,7 @@
 	}
 
 	#boxOfStars {
-		position: relative;
+		position: fixed;
 		display: block;
 		position: inherit;
 		width: 3840px;
@@ -176,13 +187,24 @@
 	}
 
 	.mitchClouds {
-		z-index: -1;
-		position: relative;
+		position: fixed;
 		display: block;
-		position: inherit;
-		width: 2500px;
+		width: 1920px;
+		height: 1920px;
 		z-index: -2;
 		overflow: hidden;
+	}
+	.secondCloud {
+		top: 1920px;
+		left: 0px;
+	}
+	.thirdCloud {
+		top: 0px;
+		left: 1920px;
+	}
+	.fourthCloud {
+		top: 1920px;
+		left: 1920px;
 	}
 
 	@keyframes flickerAnimation {
