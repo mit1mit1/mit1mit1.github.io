@@ -20,7 +20,8 @@ export const projectList: Array<ProjectInfo> = [
 		description: `Notes on some resources I've found helpful as a software developer, and a comic based on some of the notes.`,
 		githubAddress: 'https://github.com/mit1mit1/software-dev-resources',
 		siteAddress: 'https://mit1mit1.github.io/software-dev-resources',
-		iconName: 'beanie.ico'
+		iconName: 'beanie.ico',
+		needsBackground: true,
 	},
 	{
 		name: 'Explomandlebrot',
@@ -36,6 +37,7 @@ export const projectList: Array<ProjectInfo> = [
 			'Learn French, play chess, and fail history class. Featuring art by Tom Su (contact details available on request).',
 		githubAddress: 'https://github.com/mit1mit1/napoleonic-chess-simulator-3000',
 		siteAddress: 'https://mit1mit1.github.io/napoleonic-chess-simulator-3000',
-		iconName: 'Napoleon.svg'
+		iconName: 'Napoleon.svg',
+		needsBackground: true,
 	}
 ];

@@ -3,7 +3,7 @@
 		class="stick-head"
 		x="80"
 		y="130"
-		stroke="black"
+		stroke="white"
 		height="80"
 		width="80"
 		rx="22.857142857142858"
@@ -18,7 +18,7 @@
 		x2="120"
 		y2="330"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -28,7 +28,7 @@
 		x2="147.54"
 		y2="295.85334756444473"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -38,7 +38,7 @@
 		x2="64.91999999999999"
 		y2="214.52353846553106"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -48,7 +48,7 @@
 		x2="162.84"
 		y2="355.1099927614182"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -58,7 +58,7 @@
 		x2="46.55999999999999"
 		y2="156.14245933881398"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -68,7 +68,7 @@
 		x2="166.20000000000002"
 		y2="371.57056383292115"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -78,7 +78,7 @@
 		x2="45.719999999999985"
 		y2="139.36347248024592"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -88,7 +88,7 @@
 		x2="140.88"
 		y2="396.3941684186194"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -98,7 +98,7 @@
 		x2="99.12"
 		y2="396.3941684186194"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -108,7 +108,7 @@
 		x2="154.79999999999998"
 		y2="464.5879628577031"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<line
 		stroke-linejoin="round"
@@ -118,7 +118,7 @@
 		x2="85.2"
 		y2="464.5879628577031"
 		stroke-width="2"
-		stroke="black"
+		stroke="white"
 	/>
 	<rect
 		class="beanie-fold"

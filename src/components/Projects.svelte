@@ -14,7 +14,7 @@
 					<h2 class="projectTitle">
 						{#if project.iconName}
 							<img
-								class="boxIcon"
+								class={`boxIcon ${project.needsBackground ? 'withBackground' : ''}`}
 								src={`${base}/images/${project.iconName}`}
 								alt={`Picture of ${project.name}`}
 							/>
@@ -27,7 +27,7 @@
 					<h2 class="projectTitle">
 						{#if project.iconName}
 							<img
-								class="boxIcon"
+								class={`boxIcon ${project.needsBackground ? 'withBackground' : ''}`}
 								src={`${base}/images/${project.iconName}`}
 								alt={`Picture of ${project.name}`}
 							/>
@@ -92,6 +92,11 @@
 		height: 40px;
 		vertical-align: bottom;
 		margin-right: 10px;
+	}
+
+	.withBackground {
+		background-color: #f7f8e8;
+		border-radius: 10px;
 	}
 
 	h1 {

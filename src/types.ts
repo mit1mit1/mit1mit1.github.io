@@ -4,4 +4,5 @@ export type ProjectInfo = {
 	githubAddress?: string;
 	siteAddress?: string;
 	iconName?: string;
+	needsBackground?: boolean;
 };
