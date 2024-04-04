@@ -156,46 +156,46 @@
 
 	@keyframes flickerAnimation {
 		0% {
-			opacity: 1;
-		}
-		50% {
 			opacity: 0.1;
 		}
-		100% {
+		50% {
 			opacity: 1;
+		}
+		100% {
+			opacity: 0.1;
 		}
 	}
 	@-o-keyframes flickerAnimation {
 		0% {
-			opacity: 1;
-		}
-		50% {
 			opacity: 0.1;
 		}
-		100% {
+		50% {
 			opacity: 1;
+		}
+		100% {
+			opacity: 0.1;
 		}
 	}
 	@-moz-keyframes flickerAnimation {
 		0% {
-			opacity: 1;
-		}
-		50% {
 			opacity: 0.1;
 		}
-		100% {
+		50% {
 			opacity: 1;
+		}
+		100% {
+			opacity: 0.1;
 		}
 	}
 	@-webkit-keyframes flickerAnimation {
 		0% {
-			opacity: 1;
-		}
-		50% {
 			opacity: 0.1;
 		}
-		100% {
+		50% {
 			opacity: 1;
+		}
+		100% {
+			opacity: 0.1;
 		}
 	}
 
@@ -204,7 +204,6 @@
 		-moz-animation: flickerAnimation 7s infinite;
 		-o-animation: flickerAnimation 7s infinite;
 		animation: flickerAnimation 7s infinite;
-		animation-delay: -7500ms;
 	}
 
 	.animate-flicker-11 {
@@ -212,7 +211,6 @@
 		-moz-animation: flickerAnimation 11s infinite;
 		-o-animation: flickerAnimation 11s infinite;
 		animation: flickerAnimation 11s infinite;
-		animation-delay: -6000ms;
 	}
 
 	.animate-flicker-13 {
@@ -220,7 +218,6 @@
 		-moz-animation: flickerAnimation 13s infinite;
 		-o-animation: flickerAnimation 13s infinite;
 		animation: flickerAnimation 13s infinite;
-		animation-delay: -4500ms;
 	}
 
 	.animate-flicker-17 {
@@ -228,7 +225,6 @@
 		-moz-animation: flickerAnimation 17s infinite;
 		-o-animation: flickerAnimation 17s infinite;
 		animation: flickerAnimation 17s infinite;
-		animation-delay: -3000ms;
 	}
 
 	.animate-flicker-19 {
@@ -236,6 +232,5 @@
 		-moz-animation: flickerAnimation 17s infinite;
 		-o-animation: flickerAnimation 17s infinite;
 		animation: flickerAnimation 17s infinite;
-		animation-delay: -1500ms;
 	}
 </style>
