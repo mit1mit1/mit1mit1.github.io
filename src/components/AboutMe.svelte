@@ -16,7 +16,7 @@
 </div>
 <div class="infoGrid">
 	<div class="infoSideBox">
-		<h2>What I use</h2>
+		<h2 class="boxTitle">What I use</h2>
 
 		<h3>Frontend</h3>
 		<ul>
@@ -85,7 +85,7 @@
 		</ul>
 	</div>
 	<div class="infoBottomBox">
-		<h2>Experience</h2>
+		<h2 class="boxTitle">Experience</h2>
 
 		<div class="experienceParagraph">
 			For the past {yearsExperience} and a bit years I've been building apps on everything from
@@ -111,6 +111,7 @@
 		display: flex;
 		gap: 10px;
 		flex-wrap: wrap;
+		margin-bottom: 20px;
 	}
 	.infoGrid {
 		display: flex;
@@ -120,9 +121,17 @@
 	}
 	.infoSideBox {
 		max-width: 500px;
+		background-color: rgba(0, 0, 0, 0.8);
+		border-radius: 10px;
+		padding: 15px;
+		height: fit-content;
 	}
 	.infoBottomBox {
 		max-width: 500px;
+		background-color: rgba(0, 0, 0, 0.8);
+		border-radius: 10px;
+		padding: 15px;
+		height: fit-content;
 	}
 
 	.mitchMug {
@@ -142,6 +151,10 @@
 		}
 	}
 
+	.boxTitle {
+		margin-top: 0px;
+	}
+
 	.aboutMeBox {
 		display: inline-flex;
 		align-items: center;
@@ -152,7 +165,7 @@
 		animation: fadeIn 1s forwards;
 		-webkit-animation: fadeIn 1s forwards;
 
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.8);
 		border-radius: 10px;
 		margin-right: 25px;
 		padding: 15px;
