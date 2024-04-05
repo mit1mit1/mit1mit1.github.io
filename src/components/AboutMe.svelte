@@ -1,14 +1,10 @@
 <script setup lang="ts">
-	// import WavingMe from './WavingMe.svelte';
-	import { base } from '$app/paths';
-
 	const yearsExperience = new Date().getFullYear() - 2017;
 </script>
 
 <h1>About me</h1>
 <div class="aboutMeBox">
 	<enhanced:img class="mitchMug" src="/static/images/yellGlowClear.png" alt="Another nutjob" />
-	<!-- <WavingMe /> -->
 	<div class="aboutMeText">
 		<div>Hi there! I'm Mitch. I like to wear beanies, if you can't tell.</div>
 		<div>
@@ -50,9 +46,14 @@
 		left: -25px;
 		animation: fadeIn 1s forwards;
 		-webkit-animation: fadeIn 1s forwards;
+		
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 10px;
+
+		padding: 15px;
 	}
 
-	.aboutMeBox div {
+	.aboutMeBox div:not(:last-child) {
 		margin-bottom: 15px;
 	}
 

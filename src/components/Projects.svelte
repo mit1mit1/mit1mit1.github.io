@@ -90,15 +90,17 @@
 	}
 
 	.projectBox {
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 10px;
 		max-width: 510px;
-		padding: 5px;
+		padding: 14px;
 		margin-right: 50px;
 	}
 
 	.projectTitle {
 		font-family: 'Indie Flower';
 		margin-bottom: 5px;
-		margin-top: 10px;
+		margin-top: 5px;
 		display: flex;
 	}
 
@@ -106,10 +108,6 @@
 		margin-right: 10px;
 		align-items: center;
 		display: flex;
-	}
-
-	.projectBox div {
-		margin-bottom: 5px;
 	}
 
 	.boxIcon {
