@@ -22,20 +22,14 @@
 	];
 	let selectedTab = tabs[0];
 	const queryParamsTabName = $page.url.searchParams.get('selectedTab');
-	console.log(queryParamsTabName);
+
 	tabs.forEach((tab) => {
 		if (tab.name === queryParamsTabName) {
 			selectedTab = tab;
 		}
 	});
-	// let expandedContainer = false;
 
 	const selectTab = (tab: Tab) => {
-		// if (selectedTab.name === tab.name && expandedContainer === false) {
-		// 	expandedContainer = true;
-		// } else {
-		// 	expandedContainer = false;
-		// }
 		selectedTab = tab;
 		$page.url.searchParams.set('selectedTab', tab.name);
 		goto(`?${$page.url.searchParams.toString()}`);
