@@ -139,5 +139,6 @@
 		font-style: italic;
 		font-family: 'Architects Daughter';
 		font-size: 1.2em;
+		display: inline-block;
 	}
 </style>

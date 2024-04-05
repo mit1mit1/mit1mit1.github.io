@@ -60,7 +60,7 @@
 				class={tab.name === selectedTab.name ? 'selectedTab' : ''}
 			>
 				{#if tab.iconClass}
-					<i class={tab.iconClass} />
+					<i class={`${tab.iconClass} buttonIcon`} />
 				{/if}
 			</button>
 		{/each}
@@ -78,9 +78,8 @@
 		padding-block: 20px;
 	}
 
-	.buttonIcon {
-		float: left;
-		padding-top: 2px;
+	.buttonIcon {		
+		min-width: 30px;
 	}
 
 	@media (min-width: 500px) {
