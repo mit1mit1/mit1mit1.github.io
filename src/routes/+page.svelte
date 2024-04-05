@@ -67,6 +67,11 @@
 		padding-inline: 10px;
 		padding-block: 20px;
 	}
+	@media (min-width: 800px) {
+		.appContainer {
+			margin-right: 25px;
+		}
+	}
 
 	.buttonIcon {
 		min-width: 30px;
@@ -90,6 +95,7 @@
 
 	.navContainer button {
 		margin-bottom: 5px;
+		margin-right: 5px;
 		transition-duration: 0.4s;
 		border: none;
 		padding: 8px 12px;

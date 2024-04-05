@@ -1,5 +1,9 @@
 <script setup lang="ts">
-	import WhatIUse from './WhatIUse.svelte';
+	import BackendTools from './BackendTools.svelte';
+	import DeploymentTools from './DeploymentTools.svelte';
+	import FrontendTools from './FrontendTools.svelte';
+	import WhatIUse from './FrontendTools.svelte';
+	import TestingAndObservabilityTools from './TestingAndObservabilityTools.svelte';
 
 	const yearsExperience = new Date().getFullYear() - 2017;
 	const age = new Date().getFullYear() - 1998;
@@ -7,21 +11,33 @@
 
 <h1 class="siteWelcome">Design | logically</h1>
 <div class="aboutMeGrid">
-	<div>
-		<div class="aboutMeBox">
-			<enhanced:img class="mitchMug" src="/static/images/yellGlowClear.png" alt="Another nutjob" />
-			<div class="aboutMeText">
-				<div>Hello there!</div>
-				<div>I'm Mitch.</div>
-				<div>I make web apps cleaner, faster and better.</div>
-			</div>
+	<div class="aboutMeBox">
+		<enhanced:img class="mitchMug" src="/static/images/yellGlowClear.png" alt="Another nutjob" />
+		<div class="aboutMeText">
+			<div>Hello there!</div>
+			<div>I'm Mitch.</div>
+			<div>I make web apps cleaner, faster and more effective.</div>
 		</div>
 	</div>
 </div>
 <div class="infoGrid">
-	<div class="infoBox">
-		<h2 class="boxTitle">What I use</h2>
-		<WhatIUse />
+	<div>
+		<div class="infoBox">
+			<h2 class="boxTitle">Frontend tools</h2>
+			<FrontendTools />
+		</div>
+		<div class="infoBox">
+			<h2 class="boxTitle">Backend tools</h2>
+			<BackendTools />
+		</div>
+		<div class="infoBox">
+			<h2 class="boxTitle">Deployment tools</h2>
+			<DeploymentTools />
+		</div>
+		<div class="infoBox">
+			<h2 class="boxTitle">Testing and observability tools</h2>
+			<TestingAndObservabilityTools />
+		</div>
 	</div>
 	<div>
 		<div class="infoBox">
@@ -36,14 +52,26 @@
 				am (according to my calculations, {age}).
 			</div>
 			<div class="experienceParagraph">
-				At the moment I work in developer experience and design system engineering.
+				At the moment I work in design system engineering and developer enablement.
 			</div>
 		</div>
 		<div class="infoBox">
 			<h2 class="boxTitle">Education</h2>
 			<div class="experienceParagraph">
-				I have a B. Sc. Mathematics with specializations in computational algorithms, logic and
-				philosophy.
+				While you can certainly be a great software engineer without a degree, in my experience it
+				can be helpful.
+			</div>
+			<div class="experienceParagraph">
+				Pure mathematics made me think through the behavior of abstract formal systems.
+			</div>
+			<div class="experienceParagraph">
+				Logic and computational algorithms gave me pretty directly applicable tools to study those
+				systems
+			</div>
+			<div class="experienceParagraph">
+				My thesis on the philosophy of mathematics was almost maximally removed from
+				practical relevance, but it did stretch my ability to think and write as clearly as possible
+				about abstract subjects.
 			</div>
 		</div>
 		<div class="infoBox">
@@ -51,7 +79,12 @@
 			<div class="experienceParagraph">
 				Somewhere along the way I picked up a taste for playing guitar too. You can check me out at <a
 					href="https://www.youtube.com/watch?v=YudszPRA5PA&ab_channel=uncutjams">uncut jams</a
-				> if you're ready for a messy trip of a song.
+				> if you're ready for a messy, messy cover.
+			</div>
+			<div class="experienceParagraph">
+				On the other hand, if you want to listen to musical savant, I recommend <a
+					href="https://www.youtube.com/watch?v=YBgvQ6QKV5k">Bill Wurtz</a
+				>.
 			</div>
 		</div>
 	</div>
@@ -66,17 +99,24 @@
 	}
 	.infoGrid {
 		display: flex;
-		gap: 30px;
-		flex-wrap: wrap;
+		gap: 20px;
 		width: 100%;
 	}
+
+	@media (max-width: 700px) {
+		.infoGrid {
+			flex-wrap: wrap;
+		}
+	}
+
 	.infoBox {
 		max-width: 500px;
+		min-width: 250px;
 		background-color: var(--panel-background-color);
 		border-radius: var(--panel-border-radius);
 		padding: var(--panel-padding);
 		height: fit-content;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 
 	.mitchMug {
@@ -111,7 +151,6 @@
 		-webkit-animation: fadeIn 1s forwards;
 		background-color: var(--panel-background-color);
 		border-radius: var(--panel-border-radius);
-		margin-right: 25px;
 		padding: var(--panel-padding);
 		max-width: 600px;
 	}
