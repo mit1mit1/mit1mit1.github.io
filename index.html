@@ -32,7 +32,7 @@
 				color: #d6ff85;
 				background-color: transparent;
 				text-decoration: none;
-				text-decoration: underline; 
+				text-decoration: underline;
 			}
 
 			a:visited {
@@ -48,7 +48,17 @@
 			}
 
 			a:hover {
-				text-decoration: underline; 
+				text-decoration: underline;
+			}
+
+			h1 {
+				font-family: 'Architects Daughter';
+				display: block;
+			}
+			@media (min-width: 800px) {
+				h1 {
+					margin-top: 0px;
+				}
 			}
 		</style>
 		<link
@@ -58,15 +68,15 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter" />
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.c07d0e72.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index.fcf45d61.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.f3847958.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.4f67f953.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.e570090a.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.371a4131.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.394402db.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.df9f2e7d.js">
 	</head>
 	<main>
 			<script>
 				{
-					__sveltekit_ff4lfi = {
+					__sveltekit_8inw9c = {
 						base: "",
 						env: {}
 					};
@@ -74,8 +84,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.c07d0e72.js"),
-						import("/_app/immutable/entry/app.4f67f953.js")
+						import("/_app/immutable/entry/start.e570090a.js"),
+						import("/_app/immutable/entry/app.df9f2e7d.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
