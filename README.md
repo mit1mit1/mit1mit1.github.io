@@ -1,6 +1,6 @@
 # Index of projects
 
-This is a simple site outlining the stuff I make in my free time. It also contains an overview of myself, and may eventually be expanded to include more. You can check it out at https://mit1mit1.github.io/.
+This is a simple site outlining me and the stuff I make in my free time. It may eventually be expanded to include more. You can check it out at https://mit1mit1.github.io/.
 
 ## Svelte
 

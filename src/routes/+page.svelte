@@ -120,7 +120,7 @@
 	}
 	@media (min-width: 800px) {
 		.navContainer {
-			position: absolute;
+			position: fixed;
 			right: 10px;
 			flex-direction: column;
 		}
