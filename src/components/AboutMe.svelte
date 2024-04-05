@@ -72,9 +72,9 @@
 	}
 	.infoBox {
 		max-width: 500px;
-		background-color: rgba(0, 0, 0, 0.8);
-		border-radius: 10px;
-		padding: 15px;
+		background-color: var(--panel-background-color);
+		border-radius: var(--panel-border-radius);
+		padding: var(--panel-padding);
 		height: fit-content;
 		margin-bottom: 30px;
 	}
@@ -109,11 +109,10 @@
 		left: -25px;
 		animation: fadeIn 1s forwards;
 		-webkit-animation: fadeIn 1s forwards;
-
-		background-color: rgba(0, 0, 0, 0.8);
-		border-radius: 10px;
+		background-color: var(--panel-background-color);
+		border-radius: var(--panel-border-radius);
 		margin-right: 25px;
-		padding: 15px;
+		padding: var(--panel-padding);
 		max-width: 600px;
 	}
 

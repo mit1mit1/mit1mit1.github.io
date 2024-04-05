@@ -78,7 +78,7 @@
 	}
 
 	.slowFade {
-		animation: fadeIn 2s;
+		animation: fadeIn 1.5s;
 	}
 
 	.mediumFade {
@@ -90,10 +90,10 @@
 	}
 
 	.projectBox {
-		background-color: rgba(0, 0, 0, 0.6);
-		border-radius: 10px;
+		background-color: var(--panel-background-color);
+		border-radius: var(--panel-border-radius);
 		max-width: 510px;
-		padding: 14px;
+		padding: var(--panel-padding);
 		margin-right: 50px;
 	}
 
