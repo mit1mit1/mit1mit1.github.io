@@ -26,8 +26,4 @@
 	.supportUsBox div {
 		margin-bottom: 15px;
 	}
-
-	h1 {
-		font-family: 'Architects Daughter';
-	}
 </style>

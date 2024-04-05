@@ -10,18 +10,18 @@
 	import { goto } from '$app/navigation';
 
 	interface Tab {
-		name: string;
+		name?: string;
 		component: typeof SvelteComponent;
 		iconClass: string;
 	}
 	const tabs: Tab[] = [
-		{ iconClass: 'fa-solid fa-home', name: 'Home', component: AboutMe },
-		{ iconClass: 'fa-solid fa-screwdriver-wrench', name: 'Personal projects', component: Projects },
-		{ iconClass: 'fa-solid fa-envelope', name: 'Contact', component: Contact },
-		{ iconClass: 'fa-solid fa-handshake', name: 'Support', component: SupportUs }
+		{ iconClass: 'fa-solid fa-home', component: AboutMe },
+		{ iconClass: 'fa-solid fa-screwdriver-wrench', name: 'projects', component: Projects },
+		{ iconClass: 'fa-solid fa-envelope', name: 'contact', component: Contact },
+		{ iconClass: 'fa-solid fa-handshake', name: 'support', component: SupportUs }
 	];
 	let selectedTab = tabs[0];
-	const queryParamsTabName = $page.url.searchParams.get('selectedTab');
+	const queryParamsTabName = $page.url.searchParams.get('tab');
 
 	tabs.forEach((tab) => {
 		if (tab.name === queryParamsTabName) {
@@ -31,7 +31,11 @@
 
 	const selectTab = (tab: Tab) => {
 		selectedTab = tab;
-		$page.url.searchParams.set('selectedTab', tab.name);
+		if (tab.name) {
+			$page.url.searchParams.set('tab', tab.name);
+		} else {
+			$page.url.searchParams.delete('tab');
+		}
 		goto(`?${$page.url.searchParams.toString()}`);
 	};
 </script>
@@ -64,7 +68,7 @@
 		{#each tabs as tab}
 			<button
 				on:click={() => selectTab(tab)}
-				aria-label={tab.name}
+				aria-label={tab.name ?? 'home'}
 				class={tab.name === selectedTab.name ? 'selectedTab' : ''}
 			>
 				{#if tab.iconClass}
@@ -137,6 +141,7 @@
 		transition: max-height 0.5s ease-out;
 		opacity: 80%;
 		display: inline-block;
+		transition: background-color 0.5s;
 	}
 
 	.navContainer button.selectedTab {
@@ -148,7 +153,7 @@
 	}
 
 	.navContainer .selectedTab {
-		background-color: #d7d7d7;
+		background-color: #a5a5a5;
 	}
 
 	.pageContainer {

@@ -27,9 +27,6 @@
 		margin-bottom: 15px;
 	}
 
-	h1 {
-		font-family: 'Architects Daughter';
-	}
 
 	.label {
 		min-width: 5em;

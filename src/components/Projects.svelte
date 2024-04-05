@@ -123,7 +123,6 @@
 	}
 
 	h1 {
-		font-family: 'Architects Daughter';
 		margin-bottom: 5px;
 	}
 
