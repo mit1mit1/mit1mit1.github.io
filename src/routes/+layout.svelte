@@ -56,12 +56,12 @@
 		{#each tabs as tab}
 			<button
 				on:click={() => selectTab(tab)}
+				aria-label={tab.name}
 				class={tab.name === selectedTab.name ? 'selectedTab' : ''}
 			>
 				{#if tab.iconClass}
 					<i class={tab.iconClass} />
 				{/if}
-				<!-- {tab.name} -->
 			</button>
 		{/each}
 	</div>
