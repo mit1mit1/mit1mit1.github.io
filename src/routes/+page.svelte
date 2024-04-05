@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { stars } from '../constants/stars';
+	import BoxOfStars from '../components/BoxOfStars.svelte';
 	import AboutMe from '../components/AboutMe.svelte';
 	import Contact from '../components/Contact.svelte';
 	import Projects from '../components/Projects.svelte';
@@ -40,29 +40,7 @@
 	};
 </script>
 
-<div class="pageHolder">
-	<enhanced:img class="mitchClouds" src="/static/images/smileGlowBaW.png" alt="A nutjob" />
-	<enhanced:img
-		class="mitchClouds secondCloud"
-		src="/static/images/smileGlowBaW.png"
-		alt="A nutjob"
-	/>
-	<enhanced:img
-		class="mitchClouds thirdCloud"
-		src="/static/images/smileGlowBaW.png"
-		alt="A nutjob"
-	/>
-	<enhanced:img
-		class="mitchClouds fourthCloud"
-		src="/static/images/smileGlowBaW.png"
-		alt="A nutjob"
-	/>
-	<svg id="boxOfStars" viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
-		{#each [...stars] as star}
-			<circle cx={star.x} cy={star.y} r={star.radius} class={star.class} fill={star.fill} />
-		{/each}
-	</svg>
-</div>
+<BoxOfStars />
 <div class="appContainer" data-sveltekit-preload-data="hover">
 	<div class="navContainer">
 		{#each tabs as tab}
@@ -92,22 +70,6 @@
 
 	.buttonIcon {
 		min-width: 30px;
-	}
-
-	@media (min-width: 500px) {
-		.phoneOnly {
-			display: none;
-		}
-	}
-
-	:global(h1) {
-		font-family: 'Architects Daughter';
-		display: block;
-	}
-	@media (min-width: 800px) {
-		:global(h1) {
-			margin-top: 0px;
-		}
 	}
 
 	.navContainer {
@@ -142,6 +104,7 @@
 		opacity: 80%;
 		display: inline-block;
 		transition: background-color 0.5s;
+		border-radius: 3px;
 	}
 
 	.navContainer button.selectedTab {
@@ -165,124 +128,5 @@
 		.pageContainer {
 			overflow-wrap: anywhere;
 		}
-	}
-
-	.pageHolder {
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		z-index: -1;
-		overflow: hidden;
-	}
-
-	#boxOfStars {
-		position: fixed;
-		display: block;
-		position: inherit;
-		width: 3840px;
-		height: 2160px;
-		z-index: -1;
-		overflow: hidden;
-	}
-
-	.mitchClouds {
-		position: fixed;
-		display: block;
-		width: 1920px;
-		height: 1920px;
-		z-index: -2;
-		overflow: hidden;
-	}
-	.secondCloud {
-		top: 1920px;
-		left: 0px;
-	}
-	.thirdCloud {
-		top: 0px;
-		left: 1920px;
-	}
-	.fourthCloud {
-		top: 1920px;
-		left: 1920px;
-	}
-
-	@keyframes flickerAnimation {
-		0% {
-			opacity: 0.1;
-		}
-		50% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0.1;
-		}
-	}
-	@-o-keyframes flickerAnimation {
-		0% {
-			opacity: 0.1;
-		}
-		50% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0.1;
-		}
-	}
-	@-moz-keyframes flickerAnimation {
-		0% {
-			opacity: 0.1;
-		}
-		50% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0.1;
-		}
-	}
-	@-webkit-keyframes flickerAnimation {
-		0% {
-			opacity: 0.1;
-		}
-		50% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0.1;
-		}
-	}
-
-	.animate-flicker-7 {
-		-webkit-animation: flickerAnimation 7s infinite;
-		-moz-animation: flickerAnimation 7s infinite;
-		-o-animation: flickerAnimation 7s infinite;
-		animation: flickerAnimation 7s infinite;
-	}
-
-	.animate-flicker-11 {
-		-webkit-animation: flickerAnimation 11s infinite;
-		-moz-animation: flickerAnimation 11s infinite;
-		-o-animation: flickerAnimation 11s infinite;
-		animation: flickerAnimation 11s infinite;
-	}
-
-	.animate-flicker-13 {
-		-webkit-animation: flickerAnimation 13s infinite;
-		-moz-animation: flickerAnimation 13s infinite;
-		-o-animation: flickerAnimation 13s infinite;
-		animation: flickerAnimation 13s infinite;
-	}
-
-	.animate-flicker-17 {
-		-webkit-animation: flickerAnimation 17s infinite;
-		-moz-animation: flickerAnimation 17s infinite;
-		-o-animation: flickerAnimation 17s infinite;
-		animation: flickerAnimation 17s infinite;
-	}
-
-	.animate-flicker-19 {
-		-webkit-animation: flickerAnimation 17s infinite;
-		-moz-animation: flickerAnimation 17s infinite;
-		-o-animation: flickerAnimation 17s infinite;
-		animation: flickerAnimation 17s infinite;
 	}
 </style>
