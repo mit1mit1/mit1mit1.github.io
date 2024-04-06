@@ -117,14 +117,15 @@
 		display: inline-block;
 		transition: background-color 0.5s;
 		border-radius: 3px;
+		background-color: rgb(239, 239, 239);
 	}
 
 	.navContainer button.selectedTab {
 		display: inline-block;
 	}
 
-	.navContainer button:hover {
-		background-color: #c4c3c3;
+	.navContainer button:hover:not(.selectedTab) {
+		background-color: rgb(245, 245, 245);
 	}
 
 	.navContainer .selectedTab {

@@ -2,21 +2,21 @@
 	import BackendTools from './BackendTools.svelte';
 	import DeploymentTools from './DeploymentTools.svelte';
 	import FrontendTools from './FrontendTools.svelte';
-	import WhatIUse from './FrontendTools.svelte';
 	import TestingAndObservabilityTools from './TestingAndObservabilityTools.svelte';
 
 	const yearsExperience = new Date().getFullYear() - 2017;
-	const age = new Date().getFullYear() - 1998;
 </script>
 
 <h1 class="siteWelcome">Design | logically</h1>
 <div class="aboutMeGrid">
 	<div class="aboutMeBox">
 		<enhanced:img class="mitchMug" src="/static/images/yellGlowClear.png" alt="Another nutjob" />
-		<div class="aboutMeText">
-			<div>Hello there!</div>
-			<div>I'm Mitch.</div>
-			<div>I make web apps cleaner, faster and more effective.</div>
+		<div class="aboutMeContents">
+			<div class="aboutMeTitle">Hey there!</div>
+			<div class="aboutMeSubtitle">
+				I'm Mitch. Full-time fullstack engineer, part-time writer, musician and maker of strange
+				expressions.
+			</div>
 		</div>
 	</div>
 </div>
@@ -49,7 +49,7 @@
 			</div>
 			<div class="experienceParagraph">
 				I've built greenfield projects from the ground up and I've refactored software older than I
-				am (according to my calculations, {age}).
+				am.
 			</div>
 			<div class="experienceParagraph">
 				At the moment I work in design system engineering and developer enablement.
@@ -58,8 +58,7 @@
 		<div class="infoBox">
 			<h2 class="boxTitle">Education</h2>
 			<div class="experienceParagraph">
-				While you can certainly be a great software engineer without a degree, in my experience it
-				can be helpful.
+				While you can certainly be a great software engineer without a degree, it can be helpful.
 			</div>
 			<div class="experienceParagraph">
 				Pure mathematics made me think through the behavior of abstract formal systems.
@@ -69,9 +68,12 @@
 				systems
 			</div>
 			<div class="experienceParagraph">
-				My thesis on the philosophy of mathematics was almost maximally removed from
-				practical relevance, but it did stretch my ability to think and write as clearly as possible
-				about abstract subjects.
+				My thesis on the philosophy of mathematics was almost maximally removed from practical
+				relevance, but it did stretch my ability to think and write clearly.
+			</div>
+			<div class="experienceParagraph">
+				Plus, it's a lot of fun. So to all the aspiring software gurus out there - get a math
+				degree.
 			</div>
 		</div>
 		<div class="infoBox">
@@ -155,10 +157,13 @@
 		max-width: 600px;
 	}
 
-	.aboutMeText {
+	.aboutMeContents {
 		vertical-align: top;
 		font-style: italic;
 		font-family: 'Architects Daughter';
+	}
+
+	.aboutMeTitle {
 		font-size: 1.2em;
 	}
 

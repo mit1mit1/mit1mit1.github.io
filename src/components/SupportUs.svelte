@@ -15,7 +15,7 @@
 			<li>any other charity you know is doing good work.</li>
 		</ul>
 	</div>
-	<div>Feel free to let me know and I'll consider it game-development income.</div>
+	<div>Feel free to let me know and I'll consider it hobby-project income.</div>
 </div>
 
 <style>
