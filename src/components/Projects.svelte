@@ -62,7 +62,7 @@
 		gap: 10px;
 		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	}
-	@media (max-width: 400px) {
+	@media (max-width: 450px) {
 		.projectsContainer {
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		}
