@@ -41,28 +41,34 @@
 </script>
 
 <BoxOfStars />
-<div class="appContainer" data-sveltekit-preload-data="hover">
-	<div class="navContainer">
-		{#each tabs as tab}
-			<button
-				on:click={() => selectTab(tab)}
-				aria-label={tab.name ?? 'home'}
-				class={tab.name === selectedTab.name ? 'selectedTab' : ''}
-			>
-				{#if tab.iconClass}
-					<i class={`${tab.iconClass} buttonIcon`} />
-				{/if}
-			</button>
-		{/each}
-	</div>
-	<div style="display: contents">
-		<div class="pageContainer">
-			<svelte:component this={selectedTab.component} />
+<div class="scrollbarPadding">
+	<div class="appContainer" data-sveltekit-preload-data="hover">
+		<div class="navContainer">
+			{#each tabs as tab}
+				<button
+					on:click={() => selectTab(tab)}
+					aria-label={tab.name ?? 'home'}
+					class={tab.name === selectedTab.name ? 'selectedTab' : ''}
+				>
+					{#if tab.iconClass}
+						<i class={`${tab.iconClass} buttonIcon`} />
+					{/if}
+				</button>
+			{/each}
+		</div>
+		<div style="display: contents">
+			<div class="pageContainer">
+				<svelte:component this={selectedTab.component} />
+			</div>
 		</div>
 	</div>
 </div>
 
 <style>
+	.scrollbarPadding {
+		padding-left: calc(100vw - 100%);
+	}
+
 	.appContainer {
 		padding-inline: 10px;
 		padding-block: 20px;
@@ -88,7 +94,7 @@
 	@media (min-width: 800px) {
 		.navContainer {
 			position: fixed;
-			right: 10px;
+			right: calc(20px + 100% - 100vw);
 			flex-direction: column;
 		}
 	}
