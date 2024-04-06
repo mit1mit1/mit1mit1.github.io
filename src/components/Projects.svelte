@@ -94,7 +94,6 @@
 		border-radius: var(--panel-border-radius);
 		max-width: 510px;
 		padding: var(--panel-padding);
-		margin-right: 50px;
 	}
 
 	.projectTitle {
