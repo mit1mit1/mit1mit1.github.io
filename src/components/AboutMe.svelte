@@ -105,7 +105,7 @@
 		width: 100%;
 	}
 
-	@media (max-width: 700px) {
+	@media (max-width: 767px) {
 		.infoGrid {
 			flex-wrap: wrap;
 		}

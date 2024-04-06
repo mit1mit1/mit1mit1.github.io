@@ -73,7 +73,7 @@
 		padding-inline: 10px;
 		padding-block: 20px;
 	}
-	@media (min-width: 800px) {
+	@media (min-width: 768px) {
 		.appContainer {
 			margin-right: 25px;
 		}
@@ -91,7 +91,7 @@
 		display: flex;
 		justify-content: space-evenly;
 	}
-	@media (min-width: 800px) {
+	@media (min-width: 768px) {
 		.navContainer {
 			position: fixed;
 			right: calc(20px + 100% - 100vw);
@@ -137,7 +137,7 @@
 		margin-right: 18px;
 		font-family: Quicksand;
 	}
-	@media (max-width: 270px) {
+	@media (max-width: 319px) {
 		.pageContainer {
 			overflow-wrap: anywhere;
 		}
