@@ -5,8 +5,14 @@
 		<meta name="google-site-verification" content="dDm8c3j1vGCEWVdLwsyi-7LxK0bHYSpP1U83s7skFWE" />
 		<title>Midly Inc. | Design, logically</title>
 		<meta property="og:title" content="Midly Inc. | Design, logically" />
-		<meta name="description" content="Hey there! I'm Mitch. I make web apps cleaner, faster and more effective." />
-		<meta property="og:description" content="Hey there! I'm Mitch. I make web apps cleaner, faster and more effective." />
+		<meta
+			name="description"
+			content="Hey there! I'm Mitch. I make web apps cleaner, faster and more effective."
+		/>
+		<meta
+			property="og:description"
+			content="Hey there! I'm Mitch. I make web apps cleaner, faster and more effective."
+		/>
 		<link rel="icon" href="/images/beanie.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta property="og:image" content="/images/flag.png" />
@@ -15,6 +21,12 @@
 			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4178213103725572"
 			crossorigin="anonymous"
 		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
 		<style>
 			html {
 				min-height: 100vh;
@@ -24,8 +36,13 @@
 				--panel-background-color: rgba(0, 0, 0, 0.8);
 				--panel-border-radius: 10px;
 				--panel-padding: 15px;
-				--font-family-fancy: 'Architects Daughter', 'Quicksand', 'system-ui';
-				--font-family-fancy-alt: 'Indie Flower', 'Quicksand', 'system-ui';
+				--font-family-fancy: 'Dosis', 'Roboto', 'system-ui';
+				--font-family-standard: 'Ubuntu', 'Roboto', 'system-ui';
+				font-size: 0.9em;
+			}
+
+			li:not(:last-child) {
+				margin-bottom: 5px;
 			}
 
 			body {
@@ -59,29 +76,33 @@
 			h1 {
 				font-family: var(--font-family-fancy);
 				display: block;
+				font-weight: 400;
 			}
 			@media (min-width: 768px) {
 				h1 {
 					margin-top: 0px;
 				}
 			}
+
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: var(--font-family-fancy);
+				font-weight: 400;
+			}
 		</style>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Quicksand&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter" />
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.0e33db6a.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.9c1a757d.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/index.371a4131.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.db5f93f5.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.21a1d330.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.fe68c950.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.8b6f776b.js">
 	</head>
 	<main>
 			<script>
 				{
-					__sveltekit_86vi1d = {
+					__sveltekit_12bvuu4 = {
 						base: "",
 						env: {}
 					};
@@ -89,8 +110,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.0e33db6a.js"),
-						import("/_app/immutable/entry/app.21a1d330.js")
+						import("/_app/immutable/entry/start.9c1a757d.js"),
+						import("/_app/immutable/entry/app.8b6f776b.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
