@@ -135,7 +135,7 @@
 	.pageContainer {
 		margin-left: 18px;
 		margin-right: 18px;
-		font-family: Quicksand;
+		font-family: 'Quicksand', sans-serif;
 	}
 	@media (max-width: 319px) {
 		.pageContainer {

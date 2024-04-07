@@ -97,13 +97,10 @@
 	}
 
 	.projectTitle {
-		font-family: 'Indie Flower';
+		font-family: var(--font-family-fancy-alt);
 		margin-bottom: 5px;
 		margin-top: 5px;
 		display: flex;
-	}
-
-	.projectTitle {
 		margin-right: 10px;
 		align-items: center;
 		display: flex;
@@ -133,7 +130,7 @@
 	.subheading {
 		margin-bottom: 15px;
 		font-style: italic;
-		font-family: 'Architects Daughter';
+		font-family: var(--font-family-fancy);
 		font-size: 1.2em;
 		display: inline-block;
 	}

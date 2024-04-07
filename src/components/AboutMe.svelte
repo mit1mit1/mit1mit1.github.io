@@ -160,7 +160,7 @@
 	.aboutMeContents {
 		vertical-align: top;
 		font-style: italic;
-		font-family: 'Architects Daughter';
+		font-family: var(--font-family-fancy);
 	}
 
 	.aboutMeTitle {
