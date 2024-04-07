@@ -2,6 +2,15 @@ import type { ProjectInfo } from '../types';
 
 export const projectList: Array<ProjectInfo> = [
 	{
+		name: 'Software Dev Resources',
+		description: `Notes on some resources I've found helpful as a software developer, and a comic based on some of the notes.`,
+		githubAddress: 'https://github.com/mit1mit1/software-dev-resources',
+		siteAddress: 'https://mit1mit1.github.io/software-dev-resources',
+		iconName: 'beanie.ico',
+		needsBackground: true,
+		fadeInSpeed: 'fast'
+	},
+	{
 		name: 'Guess the Tune',
 		description: 'A wordle-like game designed to teach sheet music reading.',
 		githubAddress: 'https://github.com/mit1mit1/guess-the-tune',
@@ -16,15 +25,6 @@ export const projectList: Array<ProjectInfo> = [
 		siteAddress: 'https://mit1mit1.github.io/newtonian-dog-fighter-3000',
 		iconName: 'newtonian.png',
 		fadeInSpeed: 'slow'
-	},
-	{
-		name: 'Software Dev Resources',
-		description: `Notes on some resources I've found helpful as a software developer, and a comic based on some of the notes.`,
-		githubAddress: 'https://github.com/mit1mit1/software-dev-resources',
-		siteAddress: 'https://mit1mit1.github.io/software-dev-resources',
-		iconName: 'beanie.ico',
-		needsBackground: true,
-		fadeInSpeed: 'fast'
 	},
 	{
 		name: 'Explomandlebrot',
