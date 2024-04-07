@@ -107,7 +107,8 @@
 		padding: 8px 12px;
 		width: 100%;
 		font-size: 1.15em;
-		font-family: 'Quicksand', sans-serif;
+		font-family: var(--font-family-standard);
+		font-weight: 300;
 		cursor: pointer;
 		color: black;
 		min-height: 50px;
@@ -135,7 +136,8 @@
 	.pageContainer {
 		margin-left: 18px;
 		margin-right: 18px;
-		font-family: 'Quicksand', sans-serif;
+		font-family: var(--font-family-standard);
+		font-weight: 300;
 	}
 	@media (max-width: 319px) {
 		.pageContainer {

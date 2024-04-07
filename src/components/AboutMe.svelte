@@ -159,12 +159,17 @@
 
 	.aboutMeContents {
 		vertical-align: top;
-		font-style: italic;
-		font-family: var(--font-family-fancy);
 	}
 
 	.aboutMeTitle {
-		font-size: 1.2em;
+		font-size: 1.35em;
+		margin-bottom: 10px;
+		font-family: var(--font-family-fancy);
+	}
+
+	.aboutMeSubtitle {
+		font-size: 0.95em;
+		margin-bottom: 10px;
 	}
 
 	.experienceParagraph {

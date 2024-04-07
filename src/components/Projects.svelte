@@ -97,7 +97,7 @@
 	}
 
 	.projectTitle {
-		font-family: var(--font-family-fancy-alt);
+		font-family: var(--font-family-fancy);
 		margin-bottom: 5px;
 		margin-top: 5px;
 		display: flex;
@@ -125,6 +125,10 @@
 	.detailsBox {
 		padding: 5px 0px;
 		margin: 5px 0px;
+	}
+
+	.detailsBox > *:not(:last-child) {
+		margin-bottom: 10px;
 	}
 
 	.subheading {
