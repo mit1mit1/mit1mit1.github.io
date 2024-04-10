@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import BoxOfStars from '../components/BoxOfStars.svelte';
+	import NavSidebar from '../components/NavSidebar.svelte';
 	import AboutMe from '../views/AboutMe.svelte';
 	import Contact from '../views/Contact.svelte';
 	import Projects from '../views/Projects.svelte';
@@ -9,12 +10,8 @@
 	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import type { SvelteComponent } from 'svelte';
 	import { goto } from '$app/navigation';
+	import type { Tab } from '../types';
 
-	interface Tab {
-		name?: string;
-		component: typeof SvelteComponent;
-		iconClass: string;
-	}
 	const tabs: Tab[] = [
 		{ iconClass: 'fa-solid fa-home', component: AboutMe },
 		{ iconClass: 'fa-brands fa-github', name: 'projects', component: Projects },
@@ -45,19 +42,7 @@
 <BoxOfStars />
 <div class="scrollbarPadding">
 	<div class="appContainer" data-sveltekit-preload-data="hover">
-		<div class="navContainer">
-			{#each tabs as tab}
-				<button
-					on:click={() => selectTab(tab)}
-					aria-label={tab.name ?? 'home'}
-					class={tab.name === selectedTab.name ? 'selectedTab' : ''}
-				>
-					{#if tab.iconClass}
-						<i class={`${tab.iconClass} buttonIcon`} />
-					{/if}
-				</button>
-			{/each}
-		</div>
+		<NavSidebar tabs={tabs} onSelectTab={(tab) => selectTab(tab)} selectedTab={selectedTab} />
 		<div style="display: contents">
 			<div class="pageContainer">
 				<svelte:component this={selectedTab.component} />
@@ -83,56 +68,6 @@
 
 	.buttonIcon {
 		min-width: 30px;
-	}
-
-	.navContainer {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		margin-bottom: 10px;
-		display: flex;
-		justify-content: space-evenly;
-	}
-	@media (min-width: 768px) {
-		.navContainer {
-			position: fixed;
-			right: calc(20px + 100% - 100vw);
-			flex-direction: column;
-		}
-	}
-
-	.navContainer button {
-		margin-bottom: 5px;
-		margin-right: 5px;
-		transition-duration: 0.4s;
-		border: none;
-		padding: 8px 12px;
-		width: 100%;
-		font-size: 1.15em;
-		font-family: var(--font-family-standard);
-		font-weight: 300;
-		cursor: pointer;
-		color: black;
-		min-height: 50px;
-		overflow: hidden;
-		transition: max-height 0.5s ease-out;
-		opacity: 80%;
-		display: inline-block;
-		transition: background-color 0.5s;
-		border-radius: 3px;
-		background-color: rgb(239, 239, 239);
-	}
-
-	.navContainer button.selectedTab {
-		display: inline-block;
-	}
-
-	.navContainer button:hover:not(.selectedTab) {
-		background-color: rgb(245, 245, 245);
-	}
-
-	.navContainer .selectedTab {
-		background-color: #a5a5a5;
 	}
 
 	.pageContainer {

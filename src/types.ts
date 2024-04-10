@@ -1,3 +1,5 @@
+import { SvelteComponent } from 'svelte';
+
 export type ProjectInfo = {
 	name: string;
 	description?: string;
@@ -7,3 +9,9 @@ export type ProjectInfo = {
 	needsBackground?: boolean;
 	fadeInSpeed: 'slow' | 'medium' | 'fast';
 };
+
+export interface Tab {
+	name?: string;
+	component: typeof SvelteComponent;
+	iconClass: string;
+}
