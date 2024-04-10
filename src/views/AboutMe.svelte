@@ -74,4 +74,9 @@
 	.experienceParagraph {
 		margin-bottom: 10px;
 	}
+
+	.siteWelcome {
+		font-size: 3em;
+		text-align: center;
+	}
 </style>

@@ -2,5 +2,5 @@
 	import ToolStack from '../components/ToolStack.svelte';
 </script>
 
-<h1>Tools I Use</h1>
+<h1>Tools of choice</h1>
 <ToolStack />
