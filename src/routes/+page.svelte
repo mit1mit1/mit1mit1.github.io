@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import BoxOfStars from '../components/BoxOfStars.svelte';
-	import AboutMe from '../components/AboutMe.svelte';
-	import Contact from '../components/Contact.svelte';
-	import Projects from '../components/Projects.svelte';
-	import MyTools from '../components/MyTools.svelte';
-	import SupportUs from '../components/SupportUs.svelte';
+	import AboutMe from '../views/AboutMe.svelte';
+	import Contact from '../views/Contact.svelte';
+	import Projects from '../views/Projects.svelte';
+	import MyTools from '../views/MyTools.svelte';
+	import SupportUs from '../views/SupportUs.svelte';
 	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import type { SvelteComponent } from 'svelte';
 	import { goto } from '$app/navigation';
@@ -17,8 +17,8 @@
 	}
 	const tabs: Tab[] = [
 		{ iconClass: 'fa-solid fa-home', component: AboutMe },
-		{ iconClass: 'fa-solid fa-screwdriver-wrench', name: 'projects', component: Projects },
-		{ iconClass: 'fa-brands fa-github', name: 'tools I use', component: MyTools },
+		{ iconClass: 'fa-brands fa-github', name: 'projects', component: Projects },
+		{ iconClass: 'fa-solid fa-screwdriver-wrench', name: 'tools I use', component: MyTools },
 		{ iconClass: 'fa-solid fa-envelope', name: 'contact', component: Contact },
 		{ iconClass: 'fa-solid fa-handshake', name: 'support', component: SupportUs }
 	];

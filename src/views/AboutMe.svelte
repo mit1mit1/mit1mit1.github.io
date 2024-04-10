@@ -1,7 +1,7 @@
 <script setup lang="ts">
-	import InfoBox from './InfoBox.svelte';
-	import ToolStack from './ToolStack.svelte';
-	import CallingCard from './CallingCard.svelte';
+	import InfoBox from '../components/InfoBox.svelte';
+	import ToolStack from '../components/ToolStack.svelte';
+	import CallingCard from '../components/CallingCard.svelte';
 
 	const yearsExperience = new Date().getFullYear() - 2017;
 </script>
