@@ -4,6 +4,7 @@
 	import AboutMe from '../components/AboutMe.svelte';
 	import Contact from '../components/Contact.svelte';
 	import Projects from '../components/Projects.svelte';
+	import MyTools from '../components/MyTools.svelte';
 	import SupportUs from '../components/SupportUs.svelte';
 	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import type { SvelteComponent } from 'svelte';
@@ -17,6 +18,7 @@
 	const tabs: Tab[] = [
 		{ iconClass: 'fa-solid fa-home', component: AboutMe },
 		{ iconClass: 'fa-solid fa-screwdriver-wrench', name: 'projects', component: Projects },
+		{ iconClass: 'fa-brands fa-github', name: 'tools I use', component: MyTools },
 		{ iconClass: 'fa-solid fa-envelope', name: 'contact', component: Contact },
 		{ iconClass: 'fa-solid fa-handshake', name: 'support', component: SupportUs }
 	];
