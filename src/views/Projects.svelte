@@ -118,10 +118,6 @@
 		border-radius: 10px;
 	}
 
-	h1 {
-		margin-bottom: 5px;
-	}
-
 	.detailsBox {
 		padding: 5px 0px;
 		margin: 5px 0px;

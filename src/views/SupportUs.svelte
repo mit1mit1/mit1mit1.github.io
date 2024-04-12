@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import PageHeading from "../components/PageHeading.svelte";
+	import PageHeading from '../components/PageHeading.svelte';
 </script>
 
 <PageHeading>Support</PageHeading>
@@ -32,7 +32,7 @@
 		margin-right: auto;
 	}
 
-	.supportUsBox div {
+	.supportUsBox div:not(:last-child) {
 		margin-bottom: 15px;
 	}
 </style>

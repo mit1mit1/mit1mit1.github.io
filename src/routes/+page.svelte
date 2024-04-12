@@ -3,35 +3,60 @@
 	import BoxOfStars from '../components/BoxOfStars.svelte';
 	import NavSidebar from '../components/NavSidebar.svelte';
 	import AboutMe from '../views/AboutMe.svelte';
+	import Home from '../views/Home.svelte';
 	import Contact from '../views/Contact.svelte';
 	import Projects from '../views/Projects.svelte';
 	import MyTools from '../views/MyTools.svelte';
-	import SupportUs from '../views/SupportUs.svelte';
+	import CallingCard from '../components/CallingCard.svelte';
+	import PageHeading from '../components/PageHeading.svelte';
 	import '@fortawesome/fontawesome-free/css/all.min.css';
-	import type { SvelteComponent } from 'svelte';
 	import { goto } from '$app/navigation';
 	import type { Tab } from '../types';
 
 	const tabs: Tab[] = [
-		{ iconClass: 'fa-solid fa-home', component: AboutMe },
-		{ iconClass: 'fa-brands fa-github', name: 'projects', component: Projects },
-		{ iconClass: 'fa-solid fa-screwdriver-wrench', name: 'tools I use', component: MyTools },
-		{ iconClass: 'fa-solid fa-envelope', name: 'contact', component: Contact },
-		{ iconClass: 'fa-solid fa-handshake', name: 'support', component: SupportUs }
+		{ iconClass: 'fa-solid fa-home', component: Home, title: 'Home' },
+		{
+			iconClass: 'fa-solid fa-user',
+			key: 'about me',
+			component: AboutMe,
+			title: 'About me',
+			description: 'Find out about Mitch'
+		},
+		{
+			iconClass: 'fa-brands fa-github',
+			key: 'projects',
+			component: Projects,
+			title: 'Personal projects',
+			description: "See what bizzare stuff I've been up to"
+		},
+		{
+			iconClass: 'fa-solid fa-screwdriver-wrench',
+			key: 'tools I use',
+			component: MyTools,
+			title: 'Tools I use',
+			description: 'Read about how much I hate coffee script'
+		},
+		{
+			iconClass: 'fa-solid fa-envelope',
+			key: 'contact',
+			component: Contact,
+			title: 'Contact',
+			description: 'Find out how to send me an angry email'
+		}
 	];
 	let selectedTab = tabs[0];
-	const queryParamsTabName = $page.url.searchParams.get('tab');
+	const queryParamsTabKey = $page.url.searchParams.get('tab');
 
 	tabs.forEach((tab) => {
-		if (tab.name === queryParamsTabName) {
+		if (tab.key === queryParamsTabKey) {
 			selectedTab = tab;
 		}
 	});
 
 	const selectTab = (tab: Tab) => {
 		selectedTab = tab;
-		if (tab.name) {
-			$page.url.searchParams.set('tab', tab.name);
+		if (tab.key) {
+			$page.url.searchParams.set('tab', tab.key);
 		} else {
 			$page.url.searchParams.delete('tab');
 		}
@@ -42,10 +67,19 @@
 <BoxOfStars />
 <div class="scrollbarPadding">
 	<div class="appContainer" data-sveltekit-preload-data="hover">
-		<NavSidebar {tabs} onSelectTab={(tab) => selectTab(tab)} {selectedTab} />
+		<NavSidebar {tabs} onSelectTab={selectTab} {selectedTab} />
 		<div style="display: contents">
 			<div class="pageContainer">
-				<svelte:component this={selectedTab.component} />
+				{#if selectedTab.key === 'about me' || selectedTab.key === undefined}
+				<PageHeading>Design · Logically</PageHeading>
+				<CallingCard />
+				{/if}
+				<svelte:component
+					this={selectedTab.component}
+					{tabs}
+					onSelectTab={selectTab}
+					{selectedTab}
+				/>
 			</div>
 		</div>
 	</div>

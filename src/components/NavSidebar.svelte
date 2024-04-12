@@ -10,8 +10,8 @@
 	{#each tabs as tab}
 		<button
 			on:click={() => onSelectTab(tab)}
-			aria-label={tab.name ?? 'home'}
-			class={tab.name === selectedTab.name ? 'selectedTab' : ''}
+			aria-label={tab.key ?? 'home'}
+			class={tab.key === selectedTab.key ? 'selectedTab' : ''}
 		>
 			{#if tab.iconClass}
 				<i class={`${tab.iconClass} buttonIcon`} />

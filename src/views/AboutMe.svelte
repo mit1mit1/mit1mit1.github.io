@@ -1,14 +1,11 @@
 <script setup lang="ts">
 	import InfoBox from '../components/InfoBox.svelte';
-	import CallingCard from '../components/CallingCard.svelte';
-	import PageHeading from '../components/PageHeading.svelte';
+	import InfoGrid from '../components/InfoGrid.svelte';
 
 	const yearsExperience = new Date().getFullYear() - 2017;
 </script>
 
-<PageHeading>Design · Logically</PageHeading>
-<CallingCard />
-<div class="infoGrid">
+<InfoGrid>
 	<div>
 		<InfoBox title="Experience">
 			<div class="experienceParagraph">
@@ -56,21 +53,9 @@
 			</div>
 		</InfoBox>
 	</div>
-</div>
+</InfoGrid>
 
 <style>
-	.infoGrid {
-		display: flex;
-		gap: 20px;
-		width: 100%;
-	}
-
-	@media (max-width: 767px) {
-		.infoGrid {
-			flex-wrap: wrap;
-		}
-	}
-
 	.experienceParagraph {
 		margin-bottom: 10px;
 	}

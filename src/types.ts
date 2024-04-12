@@ -11,7 +11,9 @@ export type ProjectInfo = {
 };
 
 export interface Tab {
-	name?: string;
+	key?: string;
+	title: string;
+	description?: string;
 	component: typeof SvelteComponent;
 	iconClass: string;
 }
