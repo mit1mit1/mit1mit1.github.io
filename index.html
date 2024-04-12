@@ -30,16 +30,17 @@
 		<style>
 			html {
 				min-height: 100vh;
-				background-color: #090909;
+				background-color: var(--base-background-color);
 				color: #e7e7e7;
 				margin: 0px;
-				--panel-background-color: rgba(5, 5, 5, 0.98);
+				font-size: 0.9em;
+				font-family: var(--font-family-standard);
+				--base-background-color: #090909;
+				--panel-background-color: rgba(20, 20, 20);
 				--panel-border-radius: 10px;
 				--panel-padding: 15px;
 				--font-family-fancy: 'Dosis', 'Roboto', 'system-ui';
 				--font-family-standard: 'Ubuntu', 'Roboto', 'system-ui';
-				font-size: 0.9em;
-				font-family: var(--font-family-standard);
 			}
 
 			li:not(:last-child) {
@@ -74,17 +75,7 @@
 				text-decoration: underline;
 			}
 
-			h1 {
-				font-family: var(--font-family-fancy);
-				display: block;
-				font-weight: 400;
-			}
-			@media (min-width: 768px) {
-				h1 {
-					margin-top: 0px;
-				}
-			}
-
+			h1,
 			h2,
 			h3,
 			h4,
@@ -95,15 +86,15 @@
 			}
 		</style>
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.e25b53c1.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index.371a4131.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.3bc906bd.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.a32b4887.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.c128234c.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.1ce14949.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.4a737263.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.0abd757d.js">
 	</head>
 	<main>
 			<script>
 				{
-					__sveltekit_tdlva7 = {
+					__sveltekit_1bydyv1 = {
 						base: "",
 						env: {}
 					};
@@ -111,8 +102,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.e25b53c1.js"),
-						import("/_app/immutable/entry/app.a32b4887.js")
+						import("/_app/immutable/entry/start.c128234c.js"),
+						import("/_app/immutable/entry/app.0abd757d.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
