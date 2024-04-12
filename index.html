@@ -31,10 +31,11 @@
 			html {
 				min-height: 100vh;
 				background-color: var(--base-background-color);
-				color: #e7e7e7;
+				color: var(--base-color);
 				margin: 0px;
 				font-size: 0.9em;
 				font-family: var(--font-family-standard);
+				--base-color: #e7e7e7;
 				--base-background-color: #090909;
 				--panel-background-color: rgba(20, 20, 20);
 				--panel-border-radius: 10px;
@@ -86,15 +87,15 @@
 			}
 		</style>
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.c128234c.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index.1ce14949.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.4a737263.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.0abd757d.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.b95662d9.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.86713157.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.852967d0.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.f1c34177.js">
 	</head>
 	<main>
 			<script>
 				{
-					__sveltekit_1bydyv1 = {
+					__sveltekit_h2a723 = {
 						base: "",
 						env: {}
 					};
@@ -102,8 +103,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.c128234c.js"),
-						import("/_app/immutable/entry/app.0abd757d.js")
+						import("/_app/immutable/entry/start.b95662d9.js"),
+						import("/_app/immutable/entry/app.f1c34177.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
