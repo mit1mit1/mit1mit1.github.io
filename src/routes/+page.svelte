@@ -71,8 +71,8 @@
 		<div style="display: contents">
 			<div class="pageContainer">
 				{#if selectedTab.key === 'about me' || selectedTab.key === undefined}
-				<PageHeader heading="Design · Logically" />
-				<CallingCard />
+					<PageHeader heading="Design · Logically" />
+					<CallingCard />
 				{/if}
 				<svelte:component
 					this={selectedTab.component}
@@ -88,6 +88,11 @@
 <style>
 	.scrollbarPadding {
 		padding-left: calc(100vw - 100%);
+	}
+	@media (min-width: 768px) {
+		.scrollbarPadding {
+			margin-right: 20px;
+		}
 	}
 
 	.appContainer {
