@@ -1,8 +1,9 @@
 <script setup lang="ts">
-	import PageHeading from '../components/PageHeading.svelte';
+	import PageHeader from '../components/PageHeader.svelte';
 </script>
 
-<PageHeading>Support</PageHeading>
+
+<PageHeader heading="Support" />
 <div class="supportUsBox">
 	<div>
 		If you enjoy my work and reckon it's worth a few bucks, please consider donating to:

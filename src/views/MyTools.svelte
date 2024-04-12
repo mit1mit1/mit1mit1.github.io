@@ -1,7 +1,7 @@
 <script setup lang="ts">
-	import PageHeading from '../components/PageHeading.svelte';
-import ToolStack from '../components/ToolStack.svelte';
+	import PageHeader from '../components/PageHeader.svelte';
+	import ToolStack from '../components/ToolStack.svelte';
 </script>
 
-<PageHeading>Tools of choice</PageHeading>
+<PageHeader heading="Tools of choice" subHeading="And why I love them" />
 <ToolStack />

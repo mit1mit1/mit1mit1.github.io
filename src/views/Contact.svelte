@@ -1,8 +1,8 @@
 <script setup lang="ts">
-	import PageHeading from "../components/PageHeading.svelte";
+	import PageHeader from "../components/PageHeader.svelte";
 </script>
 
-<PageHeading>Contact</PageHeading>
+<PageHeader heading="Contact" />
 <div class="contactBox">
 	<div>
 		<span class="label">Gmail: </span>

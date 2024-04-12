@@ -8,7 +8,7 @@
 	import Projects from '../views/Projects.svelte';
 	import MyTools from '../views/MyTools.svelte';
 	import CallingCard from '../components/CallingCard.svelte';
-	import PageHeading from '../components/PageHeading.svelte';
+	import PageHeader from '../components/PageHeader.svelte';
 	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import { goto } from '$app/navigation';
 	import type { Tab } from '../types';
@@ -71,7 +71,7 @@
 		<div style="display: contents">
 			<div class="pageContainer">
 				{#if selectedTab.key === 'about me' || selectedTab.key === undefined}
-				<PageHeading>Design · Logically</PageHeading>
+				<PageHeader heading="Design · Logically" />
 				<CallingCard />
 				{/if}
 				<svelte:component

@@ -31,5 +31,4 @@
 	.boxTitle {
 		margin-top: 0px;
 	}
-
 </style>

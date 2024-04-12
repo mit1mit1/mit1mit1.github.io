@@ -53,7 +53,7 @@
 		gap: 20px;
 		animation: fadeIn 1s forwards;
 		-webkit-animation: fadeIn 1s forwards;
-		background-color: var(--panel-background-color);
+		background-color: var(--base-background-color);
 		border-radius: var(--panel-border-radius);
 		padding: var(--panel-padding) calc(var(--panel-padding) * 1.5);
 		max-width: 600px;

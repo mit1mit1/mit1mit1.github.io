@@ -5,7 +5,7 @@
 		background-color: var(--base-background-color);
 		font-size: 3em;
 		text-align: center;
-        margin-top: 0;
-        margin-bottom: 10px;
+		margin-top: 0;
+		margin-bottom: 10px;
 	}
 </style>

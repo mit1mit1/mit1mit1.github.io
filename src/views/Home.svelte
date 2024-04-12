@@ -1,6 +1,5 @@
 <script setup lang="ts">
 	import ClickableCard from '../components/ClickableCard.svelte';
-	import InfoGrid from '../components/InfoGrid.svelte';
 	import type { Tab } from '../types';
 
 	export let tabs: Tab[];

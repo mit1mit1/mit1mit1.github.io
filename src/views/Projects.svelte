@@ -2,11 +2,10 @@
 	import { projectList } from '../constants/projects';
 	import { prettifyAddress } from '../utils/stringManipulation';
 	import { base } from '$app/paths';
-	import PageHeading from '../components/PageHeading.svelte';
+	import PageHeader from '../components/PageHeader.svelte';
 </script>
 
-<PageHeading>Personal projects</PageHeading>
-<div class="subheading">In decreasing order of polish</div>
+<PageHeader heading="Personal projects" subHeading="In decreasing order of polish" />
 <div class="projectsContainer">
 	{#each projectList as project}
 		<div
@@ -125,13 +124,5 @@
 
 	.detailsBox > *:not(:last-child) {
 		margin-bottom: 10px;
-	}
-
-	.subheading {
-		text-align: center;
-		margin-bottom: 15px;
-		font-style: italic;
-		font-family: var(--font-family-fancy);
-		font-size: 1.2em;
 	}
 </style>
