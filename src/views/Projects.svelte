@@ -110,11 +110,11 @@
 		height: 40px;
 		vertical-align: bottom;
 		margin-right: 10px;
+		border-radius: 10px;
 	}
 
 	.withBackground {
 		background-color: #d7d8c7;
-		border-radius: 10px;
 	}
 
 	.detailsBox {
