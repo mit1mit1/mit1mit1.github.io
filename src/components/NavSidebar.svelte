@@ -21,6 +21,10 @@
 </div>
 
 <style>
+	.buttonIcon {
+		min-width: 20px;
+	}
+
 	.navContainer {
 		list-style-type: none;
 		margin: 0;

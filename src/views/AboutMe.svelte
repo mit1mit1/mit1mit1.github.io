@@ -1,12 +1,12 @@
 <script setup lang="ts">
 	import InfoBox from '../components/InfoBox.svelte';
-	import ToolStack from '../components/ToolStack.svelte';
 	import CallingCard from '../components/CallingCard.svelte';
+	import PageHeading from '../components/PageHeading.svelte';
 
 	const yearsExperience = new Date().getFullYear() - 2017;
 </script>
 
-<h1 class="siteWelcome">Design · Logically</h1>
+<PageHeading>Design · Logically</PageHeading>
 <CallingCard />
 <div class="infoGrid">
 	<div>
@@ -51,8 +51,8 @@
 				write clearly.
 			</div>
 			<div class="experienceParagraph">
-				Plus, the whole thing is a lot of fun. So to all the aspiring software gurus out there - get a math
-				degree.
+				Plus, the whole thing is a lot of fun. So to all the aspiring software gurus out there - get
+				a math degree.
 			</div>
 		</InfoBox>
 	</div>
@@ -73,10 +73,5 @@
 
 	.experienceParagraph {
 		margin-bottom: 10px;
-	}
-
-	.siteWelcome {
-		font-size: 3em;
-		text-align: center;
 	}
 </style>

@@ -1,4 +1,8 @@
-<h1>Contact</h1>
+<script setup lang="ts">
+	import PageHeading from "../components/PageHeading.svelte";
+</script>
+
+<PageHeading>Contact</PageHeading>
 <div class="contactBox">
 	<div>
 		<span class="label">Gmail: </span>
@@ -20,13 +24,15 @@
 
 <style>
 	.contactBox {
-		max-width: 550px;
+		max-width: 280px;
 		border-radius: var(--panel-border-radius);
 		background-color: var(--panel-background-color);
 		padding: var(--panel-padding);
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.contactBox div {
+	.contactBox div:not(:last-child) {
 		margin-bottom: 15px;
 	}
 

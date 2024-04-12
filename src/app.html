@@ -30,16 +30,17 @@
 		<style>
 			html {
 				min-height: 100vh;
-				background-color: #090909;
+				background-color: var(--base-background-color);
 				color: #e7e7e7;
 				margin: 0px;
-				--panel-background-color: rgba(5, 5, 5, 0.98);
+				font-size: 0.9em;
+				font-family: var(--font-family-standard);
+				--base-background-color: #090909;
+				--panel-background-color: rgba(20, 20, 20);
 				--panel-border-radius: 10px;
 				--panel-padding: 15px;
 				--font-family-fancy: 'Dosis', 'Roboto', 'system-ui';
 				--font-family-standard: 'Ubuntu', 'Roboto', 'system-ui';
-				font-size: 0.9em;
-				font-family: var(--font-family-standard);
 			}
 
 			li:not(:last-child) {
@@ -74,17 +75,7 @@
 				text-decoration: underline;
 			}
 
-			h1 {
-				font-family: var(--font-family-fancy);
-				display: block;
-				font-weight: 400;
-			}
-			@media (min-width: 768px) {
-				h1 {
-					margin-top: 0px;
-				}
-			}
-
+			h1,
 			h2,
 			h3,
 			h4,

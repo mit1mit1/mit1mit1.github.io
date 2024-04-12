@@ -42,7 +42,7 @@
 <BoxOfStars />
 <div class="scrollbarPadding">
 	<div class="appContainer" data-sveltekit-preload-data="hover">
-		<NavSidebar tabs={tabs} onSelectTab={(tab) => selectTab(tab)} selectedTab={selectedTab} />
+		<NavSidebar {tabs} onSelectTab={(tab) => selectTab(tab)} {selectedTab} />
 		<div style="display: contents">
 			<div class="pageContainer">
 				<svelte:component this={selectedTab.component} />
@@ -59,15 +59,9 @@
 	.appContainer {
 		padding-inline: 10px;
 		padding-block: 20px;
-	}
-	@media (min-width: 768px) {
-		.appContainer {
-			margin-right: 25px;
-		}
-	}
-
-	.buttonIcon {
-		min-width: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1000px;
 	}
 
 	.pageContainer {

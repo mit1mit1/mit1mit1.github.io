@@ -2,9 +2,10 @@
 	import { projectList } from '../constants/projects';
 	import { prettifyAddress } from '../utils/stringManipulation';
 	import { base } from '$app/paths';
+	import PageHeading from '../components/PageHeading.svelte';
 </script>
 
-<h1>Personal projects</h1>
+<PageHeading>Personal projects</PageHeading>
 <div class="subheading">In decreasing order of polish</div>
 <div class="projectsContainer">
 	{#each projectList as project}
@@ -92,7 +93,6 @@
 	.projectBox {
 		background-color: var(--panel-background-color);
 		border-radius: var(--panel-border-radius);
-		max-width: 510px;
 		padding: var(--panel-padding);
 	}
 
@@ -132,10 +132,10 @@
 	}
 
 	.subheading {
+		text-align: center;
 		margin-bottom: 15px;
 		font-style: italic;
 		font-family: var(--font-family-fancy);
 		font-size: 1.2em;
-		display: inline-block;
 	}
 </style>

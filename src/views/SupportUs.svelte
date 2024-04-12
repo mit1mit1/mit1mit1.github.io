@@ -1,4 +1,8 @@
-<h1>Support</h1>
+<script setup lang="ts">
+	import PageHeading from "../components/PageHeading.svelte";
+</script>
+
+<PageHeading>Support</PageHeading>
 <div class="supportUsBox">
 	<div>
 		If you enjoy my work and reckon it's worth a few bucks, please consider donating to:
@@ -24,6 +28,8 @@
 		border-radius: var(--panel-border-radius);
 		background-color: var(--panel-background-color);
 		padding: var(--panel-padding);
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.supportUsBox div {

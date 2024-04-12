@@ -1,12 +1,18 @@
 <div class="callingCardGrid">
 	<div class="callingCardBox">
-		<enhanced:img class="mitchMug" src="/static/images/smileGlowPosturize.png" alt="Another nutjob" />
+		<enhanced:img
+			class="mitchMug"
+			src="/static/images/smileGlowPosturize.png"
+			alt="Another nutjob"
+		/>
 		<div class="callingCardContents">
 			<div class="callingCardTitle">Hey there! I'm Mitch.</div>
 			<div class="callingCardParagraph">
-				Fullstack engineer by day.
+				Fullstack engineer and writer, and sometimes a musician.
 			</div>
-			<div class="callingCardParagraph">Writer, mathematician and math-lover by night.</div>
+			<div class="callingCardParagraph">
+				I've got a background in maths and a passion for philosophy.
+			</div>
 		</div>
 	</div>
 </div>
@@ -23,7 +29,11 @@
 		width: 130px;
 		height: 130px;
 		border-radius: 130px;
-		padding: 10px;
+	}
+	@media (max-width: 479px) {
+		.mitchMug {
+			display: none;
+		}
 	}
 
 	@keyframes fadeIn {
@@ -40,12 +50,12 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 10px;
+		gap: 20px;
 		animation: fadeIn 1s forwards;
 		-webkit-animation: fadeIn 1s forwards;
 		background-color: var(--panel-background-color);
 		border-radius: var(--panel-border-radius);
-		padding: var(--panel-padding) calc(var(--panel-padding) * 2	);
+		padding: var(--panel-padding) calc(var(--panel-padding) * 1.5);
 		max-width: 600px;
 	}
 

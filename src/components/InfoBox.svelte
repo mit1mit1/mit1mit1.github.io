@@ -9,7 +9,6 @@
 
 <style>
 	.infoBox {
-		max-width: 500px;
 		min-width: 250px;
 		background-color: var(--panel-background-color);
 		border-radius: var(--panel-border-radius);

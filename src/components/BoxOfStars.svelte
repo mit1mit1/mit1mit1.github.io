@@ -4,22 +4,6 @@
 </script>
 
 <div class="pageHolder">
-	<enhanced:img class="mitchClouds" src="/static/images/smileGlowBaW.png" alt="A nutjob" />
-	<enhanced:img
-		class="mitchClouds secondCloud"
-		src="/static/images/smileGlowBaW.png"
-		alt="A nutjob"
-	/>
-	<enhanced:img
-		class="mitchClouds thirdCloud"
-		src="/static/images/smileGlowBaW.png"
-		alt="A nutjob"
-	/>
-	<enhanced:img
-		class="mitchClouds fourthCloud"
-		src="/static/images/smileGlowBaW.png"
-		alt="A nutjob"
-	/>
 	<svg id="boxOfStars" viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
 		{#each [...stars] as star}
 			<circle cx={star.x} cy={star.y} r={star.radius} class={star.class} fill={star.fill} />
