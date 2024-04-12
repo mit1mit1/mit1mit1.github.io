@@ -24,12 +24,18 @@
 		display: grid;
 		gap: 20px;
 		width: 100%;
-		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		grid-template-columns: 1fr 1fr;
 	}
 
 	@media (max-width: 767px) {
 		.buttonGrid {
 			flex-wrap: wrap;
+		}
+	}
+
+	@media (max-width: 479px) {
+		.buttonGrid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>

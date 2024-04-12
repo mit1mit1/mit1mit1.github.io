@@ -10,12 +10,11 @@
 
 <style>
 	.clickableCard {
-		min-width: 250px;
 		background-color: var(--panel-background-color);
 		border-radius: var(--panel-border-radius);
 		border: none;
 		padding: var(--panel-padding);
-		height: fit-content;
+		height: 100%;
 		color: var(--base-color);
 		font-family: var(--font-family-standard);
 		font-weight: 300;
