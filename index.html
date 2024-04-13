@@ -27,6 +27,7 @@
 			href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
 			rel="stylesheet"
 		/>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rock+Salt&display=swap" rel="stylesheet">
 		<style>
 			html {
 				min-height: 100vh;
@@ -35,13 +36,48 @@
 				margin: 0px;
 				font-size: 0.9em;
 				font-family: var(--font-family-standard);
-				--base-color: #e7e7e7;
-				--base-background-color: #090909;
-				--panel-background-color: rgba(20, 20, 20);
+				--base-color-dark-mode: #e7e7e7;
+				--base-background-color-dark-mode: #090909;
+				--panel-background-color-dark-mode: rgba(20, 20, 20);
+				--link-color-dark-mode: #d6ff85;
+				--link-visited-color-dark-mode: #ff8aef;
+				--link-active-color-dark-mode: #ffc1f8;
+				--button-color-dark-mode: black;
+				--button-background-color-dark-mode: rgb(239, 239, 239);
+				--button-hover-background-color-dark-mode: color-mix(
+					in srgb,
+					var(--button-background-color-dark-mode) 95%,
+					white
+				);
+				--button-selected-background-color-dark-mode: #a5a5a5;
+
+				--base-color: #090909;
+				--base-background-color: #e7e7e7;
+				--panel-background-color: #d3d3d3;
+				--link-color: #8d85ff;
+				--link-visited-color: #97448c;
+				--link-active-color: #ff68ed;
+				--button-color: black;
+				--button-background-color: rgb(212, 212, 212);
+				/* TODO fix color mix */
+				--button-hover-background-color: color-mix(
+					in srgb,
+					var(--button-background-color) 90%,
+					black
+				);
+				--button-selected-background-color: color-mix(
+					in srgb,
+					var(--button-background-color) 80%,
+					black
+				);
+
 				--panel-border-radius: 10px;
 				--panel-padding: 15px;
+
+				--font-family-handwritten: 'Rock Salt', monospace;
+
 				--font-family-fancy: 'Dosis', 'Roboto', 'system-ui';
-				--font-family-standard: 'Ubuntu', 'Roboto', 'system-ui';
+				--font-family-standard: 'Inter', 'Segoe ui', 'system-ui', 'Ubuntu', 'Roboto';
 			}
 
 			li:not(:last-child) {
@@ -54,20 +90,20 @@
 			}
 
 			a:link {
-				color: #d6ff85;
+				color: var(--link-color);
 				background-color: transparent;
 				text-decoration: none;
 				text-decoration: underline;
 			}
 
 			a:visited {
-				color: #ff8aef;
+				color: var(--link-visited-color);
 				background-color: transparent;
 				text-decoration: none;
 			}
 
 			a:active {
-				color: #ffc1f8;
+				color: var(--link-active-color);
 				background-color: transparent;
 				text-decoration: underline;
 			}
@@ -76,26 +112,34 @@
 				text-decoration: underline;
 			}
 
-			h1,
+			h1 {
+				font-family: var(--font-family-handwritten);
+				font-weight: 400;
+			}
+
 			h2,
 			h3,
 			h4,
 			h5,
 			h6 {
-				font-family: var(--font-family-fancy);
+				font-family: var(--font-family-handwritten);
 				font-weight: 400;
+			}
+
+			code {
+				font-family: var(--font-family-fancy);
 			}
 		</style>
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.dcdf8ff4.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index.86713157.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.16501e57.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.a4dd9bac.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.1d876180.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.088e1fc2.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.b8d2b9b6.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.1a1bb78b.js">
 	</head>
 	<main>
 			<script>
 				{
-					__sveltekit_1esvr3t = {
+					__sveltekit_5eu44e = {
 						base: "",
 						env: {}
 					};
@@ -103,8 +147,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.dcdf8ff4.js"),
-						import("/_app/immutable/entry/app.a4dd9bac.js")
+						import("/_app/immutable/entry/start.1d876180.js"),
+						import("/_app/immutable/entry/app.1a1bb78b.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
