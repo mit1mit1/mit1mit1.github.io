@@ -3,5 +3,5 @@
 	import ToolStack from '../components/ToolStack.svelte';
 </script>
 
-<PageHeader heading="Tools of choice" subHeading="And why I love them" />
+<PageHeader heading="Tools I use" subHeading="And how I rate them" />
 <ToolStack />

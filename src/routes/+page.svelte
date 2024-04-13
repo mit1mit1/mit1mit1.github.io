@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import BoxOfStars from '../components/BoxOfStars.svelte';
 	import NavSidebar from '../components/NavSidebar.svelte';
 	import AboutMe from '../views/AboutMe.svelte';
 	import Home from '../views/Home.svelte';
@@ -20,21 +19,21 @@
 			key: 'about me',
 			component: AboutMe,
 			title: 'About me',
-			description: 'Find out about Mitch'
+			description: 'Who is this guy anyway?'
 		},
 		{
 			iconClass: 'fa-brands fa-github',
 			key: 'projects',
 			component: Projects,
 			title: 'Personal projects',
-			description: "See what bizzare stuff I've been up to"
+			description: "See what bizarre stuff I've been up to"
 		},
 		{
 			iconClass: 'fa-solid fa-screwdriver-wrench',
 			key: 'tools I use',
 			component: MyTools,
 			title: 'Tools I use',
-			description: 'Read about how much I hate coffee script'
+			description: 'Or: how I stopped worrying and learned to love Python 3'
 		},
 		{
 			iconClass: 'fa-solid fa-envelope',
@@ -64,7 +63,7 @@
 	};
 </script>
 
-<BoxOfStars />
+<!-- <BoxOfStars /> -->
 <div class="scrollbarPadding">
 	<div class="appContainer" data-sveltekit-preload-data="hover">
 		<NavSidebar {tabs} onSelectTab={selectTab} {selectedTab} />

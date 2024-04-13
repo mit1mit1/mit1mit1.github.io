@@ -35,13 +35,46 @@
 				margin: 0px;
 				font-size: 0.9em;
 				font-family: var(--font-family-standard);
-				--base-color: #e7e7e7;
-				--base-background-color: #090909;
-				--panel-background-color: rgba(20, 20, 20);
+				--base-color-dark-mode: #e7e7e7;
+				--base-background-color-dark-mode: #090909;
+				--panel-background-color-dark-mode: rgba(20, 20, 20);
+				--link-color-dark-mode: #d6ff85;
+				--link-visited-color-dark-mode: #ff8aef;
+				--link-active-color-dark-mode: #ffc1f8;
+				--button-color-dark-mode: black;
+				--button-background-color-dark-mode: rgb(239, 239, 239);
+				--button-hover-background-color-dark-mode: color-mix(
+					in srgb,
+					var(--button-background-color-dark-mode) 95%,
+					white
+				);
+				--button-selected-background-color-dark-mode: #a5a5a5;
+
+				--base-color: #090909;
+				--base-background-color: #e7e7e7;
+				--panel-background-color: #d3d3d3;
+				--link-color: #8d85ff;
+				--link-visited-color: #97448c;
+				--link-active-color: #ff68ed;
+				--button-color: black;
+				--button-background-color: rgb(212, 212, 212);
+				/* TODO fix color mix */
+				--button-hover-background-color: color-mix(
+					in srgb,
+					var(--button-background-color) 90%,
+					black
+				);
+				--button-selected-background-color: color-mix(
+					in srgb,
+					var(--button-background-color) 80%,
+					black
+				);
+
 				--panel-border-radius: 10px;
 				--panel-padding: 15px;
+
 				--font-family-fancy: 'Dosis', 'Roboto', 'system-ui';
-				--font-family-standard: 'Ubuntu', 'Roboto', 'system-ui';
+				--font-family-standard: 'Segoe ui', 'system-ui', 'Ubuntu', 'Roboto';
 			}
 
 			li:not(:last-child) {
@@ -54,20 +87,20 @@
 			}
 
 			a:link {
-				color: #d6ff85;
+				color: var(--link-color);
 				background-color: transparent;
 				text-decoration: none;
 				text-decoration: underline;
 			}
 
 			a:visited {
-				color: #ff8aef;
+				color: var(--link-visited-color);
 				background-color: transparent;
 				text-decoration: none;
 			}
 
 			a:active {
-				color: #ffc1f8;
+				color: var(--link-active-color);
 				background-color: transparent;
 				text-decoration: underline;
 			}

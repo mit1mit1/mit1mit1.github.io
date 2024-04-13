@@ -52,14 +52,14 @@
 		font-family: var(--font-family-standard);
 		font-weight: 300;
 		cursor: pointer;
-		color: black;
+		color: var(--button-color);
 		min-height: 50px;
 		overflow: hidden;
 		transition: max-height 0.5s ease-out;
 		display: inline-block;
 		transition: background-color 0.5s;
 		border-radius: 3px;
-		background-color: rgb(239, 239, 239);
+		background-color: var(--button-background-color);
 	}
 
 	.navContainer button.selectedTab {
@@ -67,10 +67,10 @@
 	}
 
 	.navContainer button:hover:not(.selectedTab) {
-		background-color: rgb(245, 245, 245);
+		background-color: var(--button-hover-background-color);
 	}
 
 	.navContainer .selectedTab {
-		background-color: #a5a5a5;
+		background-color: var(--button-selected-background-color);
 	}
 </style>

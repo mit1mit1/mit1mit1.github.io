@@ -24,6 +24,8 @@ export const starBoxViewHeight = starBoxPixelHeight / starBoxRatioPixelViewport;
 
 const tempStars: Star[] = [];
 
+const darkMode = false;
+
 let starIndex = 0;
 while (starIndex < 1000) {
 	tempStars.push({
@@ -31,9 +33,11 @@ while (starIndex < 1000) {
 		y: Math.random() * starBoxViewHeight,
 		radius: (Math.random() + 1) / (2 * starBoxRatioPixelViewport),
 		class: starClasses[Math.floor(Math.random() * starClasses.length)],
-		fill: `rgb(${200 + Math.floor(Math.random() * 54)}, ${200 + Math.floor(Math.random() * 54)}, ${
-			200 + Math.floor(Math.random() * 54)
-		})`
+		fill: darkMode
+			? `rgb(${200 + Math.floor(Math.random() * 54)}, ${200 + Math.floor(Math.random() * 54)}, ${
+					200 + Math.floor(Math.random() * 54)
+			  })`
+			: `rgb(${200 + Math.floor(Math.random() * 50)}, ${200 + Math.floor(Math.random() * 50)}, 0)`
 	});
 	starIndex++;
 }

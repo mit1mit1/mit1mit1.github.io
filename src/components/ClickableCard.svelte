@@ -24,7 +24,7 @@
 	}
 
 	.clickableCard:hover {
-		background-color: color-mix(in srgb, var(--panel-background-color) 95%, white);
+		background-color: color-mix(in srgb, var(--panel-background-color) 90%, black);
 	}
 
 	.boxTitle {
