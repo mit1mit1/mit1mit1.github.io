@@ -24,7 +24,7 @@
 
 <style>
 	.contactBox {
-		max-width: 280px;
+		max-width: 300px;
 		border-radius: var(--panel-border-radius);
 		background-color: var(--panel-background-color);
 		padding: var(--panel-padding);

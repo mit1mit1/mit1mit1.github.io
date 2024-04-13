@@ -3,9 +3,9 @@
 <style>
 	.heading {
 		background-color: var(--base-background-color);
-		font-size: 3em;
+		font-size: 2.5em;
 		text-align: center;
 		margin-top: 0;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 </style>

@@ -27,6 +27,7 @@
 			href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
 			rel="stylesheet"
 		/>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rock+Salt&display=swap" rel="stylesheet">
 		<style>
 			html {
 				min-height: 100vh;
@@ -73,8 +74,10 @@
 				--panel-border-radius: 10px;
 				--panel-padding: 15px;
 
+				--font-family-handwritten: 'Rock Salt', monospace;
+
 				--font-family-fancy: 'Dosis', 'Roboto', 'system-ui';
-				--font-family-standard: 'Segoe ui', 'system-ui', 'Ubuntu', 'Roboto';
+				--font-family-standard: 'Inter', 'Segoe ui', 'system-ui', 'Ubuntu', 'Roboto';
 			}
 
 			li:not(:last-child) {
@@ -109,14 +112,22 @@
 				text-decoration: underline;
 			}
 
-			h1,
+			h1 {
+				font-family: var(--font-family-handwritten);
+				font-weight: 400;
+			}
+
 			h2,
 			h3,
 			h4,
 			h5,
 			h6 {
-				font-family: var(--font-family-fancy);
+				font-family: var(--font-family-handwritten);
 				font-weight: 400;
+			}
+
+			code {
+				font-family: var(--font-family-fancy);
 			}
 		</style>
 		%sveltekit.head%

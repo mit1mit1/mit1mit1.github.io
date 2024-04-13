@@ -4,7 +4,7 @@
 </script>
 
 <button class="clickableCard" on:click={onClick}>
-	<h2 class="boxTitle">{title}</h2>
+	<div class="boxTitle">{title}</div>
 	<slot />
 </button>
 
@@ -29,5 +29,8 @@
 
 	.boxTitle {
 		margin-top: 0px;
+		font-family: var(--font-family-fancy);
+		font-size: 1.5em;
+		margin-bottom: 10px;
 	}
 </style>

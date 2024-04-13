@@ -67,12 +67,13 @@
 	}
 
 	.callingCardTitle {
-		font-size: 1.45em;
-		margin-bottom: 10px;
-		font-family: var(--font-family-fancy);
+		font-size: 1.2em;
+		margin-bottom: 5px;
+		font-family: var(--font-family-handwritten);
 	}
 
 	.callingCardParagraph {
 		margin-bottom: 5px;
+		font-family: monospace;
 	}
 </style>
