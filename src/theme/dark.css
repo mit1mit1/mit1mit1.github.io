@@ -1,0 +1,12 @@
+html {
+	--base-color: #e7e7e7;
+	--base-background-color: #090909;
+	--panel-background-color: rgba(20, 20, 20);
+	--link-color: #d6ff85;
+	--link-visited-color: #ff8aef;
+	--link-active-color: #ffc1f8;
+	--button-color: black;
+	--button-background-color: rgb(239, 239, 239);
+	--button-hover-background-color: color-mix(in srgb, var(--button-background-color) 95%, white);
+	--button-selected-background-color: #a5a5a5;
+}

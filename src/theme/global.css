@@ -1,0 +1,67 @@
+html {
+	--panel-border-radius: 10px;
+	--panel-padding: 15px;
+
+	--font-family-handwritten: 'Rock Salt', monospace;
+
+	--font-family-fancy: 'Dosis', 'Roboto', 'system-ui';
+	--font-family-standard: 'Inter', 'Segoe ui', 'system-ui', 'Ubuntu', 'Roboto';
+	--font-family-alt: monospace;
+
+    min-height: 100vh;
+    background-color: var(--base-background-color);
+    color: var(--base-color);
+    margin: 0px;
+    font-size: 0.9em;
+    font-family: var(--font-family-standard);
+}
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+a:link {
+    color: var(--link-color);
+    background-color: transparent;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--link-visited-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--link-active-color);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: var(--font-family-handwritten);
+    font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-handwritten);
+    font-weight: 400;
+}
+
+code {
+    font-family: var(--font-family-fancy);
+}
