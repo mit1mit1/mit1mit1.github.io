@@ -1,11 +1,19 @@
 <script setup lang="ts">
 	export let title: string;
 	export let onClick: () => void;
+	export let iconClass: string;
 </script>
 
 <button class="clickableCard" on:click={onClick}>
-	<div class="boxTitle">{title}</div>
-	<slot />
+	<div class="iconContainer">
+		{#if iconClass}
+			<i class={`${iconClass} cardIcon`} />
+		{/if}
+	</div>
+	<div>
+		<div class="boxTitle">{title}</div>
+		<slot />
+	</div>
 </button>
 
 <style>
@@ -21,6 +29,10 @@
 		cursor: pointer;
 		transition: max-height 0.5s ease-out;
 		transition: background-color 0.5s;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		gap: 15px;
 	}
 
 	.clickableCard:hover {
@@ -32,5 +44,18 @@
 		font-family: var(--font-family-fancy);
 		font-size: 1.5em;
 		margin-bottom: 10px;
+	}
+
+	.cardIcon {
+		min-height: 30px;
+		min-width: 30px;
+		font-size: 30px;
+		vertical-align: middle;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	.iconContainer {
+		display: inline-block;
 	}
 </style>

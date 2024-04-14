@@ -10,7 +10,7 @@
 <div class="buttonGrid">
 	{#each tabs as tab}
 		{#if !(tab.key === selectedTab.key)}
-			<ClickableCard title={tab.title} onClick={() => onSelectTab(tab)}>
+			<ClickableCard title={tab.title} onClick={() => onSelectTab(tab)} iconClass={tab.iconClass}>
 				{#if tab.description}
 					{tab.description}
 				{/if}

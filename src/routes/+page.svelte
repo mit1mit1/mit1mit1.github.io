@@ -26,21 +26,21 @@
 			key: 'projects',
 			component: Projects,
 			title: 'Personal projects',
-			description: "See what bizarre stuff I've been up to"
+			description: "See what bizarre stuff I've been up to."
 		},
 		{
 			iconClass: 'fa-solid fa-screwdriver-wrench',
 			key: 'tools I use',
 			component: MyTools,
 			title: 'Tools I use',
-			description: 'Or: how I stopped worrying and learned to love Python 3'
+			description: 'Or: how I stopped worrying and learned to love Python 3.'
 		},
 		{
 			iconClass: 'fa-solid fa-envelope',
 			key: 'contact',
 			component: Contact,
 			title: 'Contact',
-			description: 'Find out how to send me an angry email'
+			description: 'Find out how to send me an angry email!'
 		}
 	];
 	let selectedTab = tabs[0];
