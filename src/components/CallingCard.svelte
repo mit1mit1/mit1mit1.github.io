@@ -8,7 +8,7 @@
 		<div class="callingCardContents">
 			<div class="callingCardTitle">Hey there! I'm Mitch.</div>
 			<div class="callingCardParagraph">
-				Fullstack engineer and writer, and sometimes a musician.
+				Fullstack engineer, writer, and sometimes a musician.
 			</div>
 			<div class="callingCardParagraph">
 				I've got a background in maths and a passion for philosophy.
@@ -74,6 +74,6 @@
 
 	.callingCardParagraph {
 		margin-bottom: 5px;
-		font-family: monospace;
+		font-family: var(--font-family-alt);
 	}
 </style>

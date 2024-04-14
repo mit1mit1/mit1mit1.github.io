@@ -23,7 +23,7 @@
 		</InfoBox>
 		<InfoBox title="Music">
 			<div class="experienceParagraph">
-				Somewhere along the way I picked up a taste for playing guitar too. You can check me out at <a
+				Somewhere along the way I picked up a taste for playing the guitar. You can check me out at <a
 					href="https://www.youtube.com/watch?v=YudszPRA5PA&ab_channel=uncutjams">uncut jams</a
 				> if you're ready for a messy, messy cover.
 			</div>
