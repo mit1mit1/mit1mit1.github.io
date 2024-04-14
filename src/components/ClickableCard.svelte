@@ -18,7 +18,7 @@
 
 <style>
 	.clickableCard {
-		background-color: var(--panel-background-color);
+		background-color: var(--button-background-color);
 		border-radius: var(--panel-border-radius);
 		border: none;
 		padding: var(--panel-padding);
@@ -33,10 +33,11 @@
 		display: flex;
 		align-items: center;
 		gap: 15px;
+		box-shadow: 0 10px 0 -5px color-mix(in srgb, var(--button-background-color) 50%, var(--button-hover-background-color));
 	}
 
 	.clickableCard:hover {
-		background-color: color-mix(in srgb, var(--panel-background-color) 90%, black);
+		background-color: var(--button-hover-background-color);
 	}
 
 	.boxTitle {
