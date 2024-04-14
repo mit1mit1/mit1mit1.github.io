@@ -85,8 +85,8 @@
 </div>
 
 <style>
-	@import '../theme/light.css';
-	@import '../theme/global.css';
+	@import '../themes/light.css';
+	@import '../themes/global.css';
 
 	.scrollbarPadding {
 		padding-left: calc(100vw - 100%);
