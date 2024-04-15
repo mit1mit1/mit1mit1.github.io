@@ -2,7 +2,7 @@
 	<div class="callingCardBox">
 		<enhanced:img
 			class="mitchMug"
-			src="/static/images/smileGlowPosturize.png"
+			src="/static/images/GreyHeadshotSquare.png"
 			alt="Another nutjob"
 		/>
 		<div class="callingCardContents">
