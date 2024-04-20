@@ -32,6 +32,7 @@
 		margin-bottom: 10px;
 		display: flex;
 		justify-content: space-evenly;
+		z-index: 2;
 	}
 	@media (min-width: 768px) {
 		.navContainer {
