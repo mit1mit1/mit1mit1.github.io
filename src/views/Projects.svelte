@@ -114,7 +114,7 @@
 	}
 
 	.withBackground {
-		background-color: #d7d8c7;
+		background-color: #f0f0f0;
 	}
 
 	.detailsBox {

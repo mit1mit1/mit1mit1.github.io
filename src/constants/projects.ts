@@ -11,6 +11,16 @@ export const projectList: Array<ProjectInfo> = [
 		fadeInSpeed: 'fast'
 	},
 	{
+		name: 'Circle of Scales',
+		description:
+			'Scales, modes, pentatonic, diatonic - what the heck are these, and how do they relate to each other? Feat: Svelte.',
+		githubAddress: 'https://github.com/mit1mit1/circle-of-scales',
+		siteAddress: 'https://mit1mit1.github.io/circle-of-scales',
+		iconName: 'circleOfScales.png',
+		needsBackground: true,
+		fadeInSpeed: 'fast'
+	},
+	{
 		name: 'Guess the Tune',
 		description: 'A wordle-like game designed to teach sheet music reading.',
 		githubAddress: 'https://github.com/mit1mit1/guess-the-tune',
@@ -44,13 +54,5 @@ export const projectList: Array<ProjectInfo> = [
 		iconName: 'Napoleon.svg',
 		needsBackground: true,
 		fadeInSpeed: 'slow'
-	},
-	{
-		name: 'mit1mit1.github.io',
-		description: `Turns out, you're looking at at a hobby project right now! I figured I'd give Svelte a whirl, and oh boy, it's a lot of fun.`,
-		githubAddress: 'https://github.com/mit1mit1/mit1mit1.github.io',
-		siteAddress: 'https://mit1mit1.github.io',
-		iconName: 'smileGlowPosturize.png',
-		fadeInSpeed: 'fast'
-	},
+	}
 ];
